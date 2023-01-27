@@ -11,13 +11,22 @@
     padding: 0px 20px;
     border-radius: 10px 10px 0 0;
 
+    @media screen and (max-width: $mobile-size) {
+        top: 0px;
+        width: 60%;
+        height: 80px;
+        padding: 0;
+        background-color: transparent;
+        z-index: 1;
+    }
+
     & p {
         color: $color1;
         width: 25%;
-        
+
         @media screen and (max-width: $tablet-size) {
-                font-size: 0.8rem;
-            }
+            font-size: 0.8rem;
+        }
     }
 
     & ul {
@@ -37,8 +46,8 @@
                 transition: 0.2s;
 
                 @media screen and (max-width: $tablet-size) {
-                        font-size: 1.5rem;
-                    }
+                    font-size: 1.5rem;
+                }
 
                 &:hover {
                     transform: scale(1.2);

@@ -10,8 +10,8 @@ import photoMS from "./assets/img/ms-color-resized.webp";
 
 const Home = () => {
 	useEffect(() => {
-		const userWidth =
-			document.documentElement.clientWidth || window.innerWidth;
+		// const userWidth =
+		// 	document.documentElement.clientWidth || window.innerWidth;
 
 		const aboutParagraph = document.querySelector(".content > p");
 		const aboutImg = document.querySelector("#about img");
@@ -25,14 +25,14 @@ const Home = () => {
 				(window.scrollY + window.innerHeight) /
 				document.body.offsetHeight;
 
-			if (scrollValue > 0.4 && userWidth >= 768) {
+			if (scrollValue > 0.4) {
 				aboutParagraph.style.animation =
 					"aboutParagraph 1s ease-out forwards";
 				aboutImg.style.animation =
 					"aboutImg 1.5s ease-out 0.5s forwards";
 			}
 
-			if (scrollValue > 0.55 && userWidth >= 768) {
+			if (scrollValue > 0.55) {
 				reactLogo.style.animation =
 					"reactLogo 1.5s ease-out 1.5s forwards";
 				formationImg.style.opacity = 1;
