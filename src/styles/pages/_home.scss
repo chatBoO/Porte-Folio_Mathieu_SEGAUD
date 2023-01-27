@@ -25,8 +25,8 @@ section {
             line-height: 2.5rem;
             font-size: 1.3rem;
             margin: 0;
-            opacity: 0;
-            transform: translateX(-500px);
+            // opacity: 0;
+            // transform: translateX(-500px);
 
           @media screen and (max-width: $tablet-size) {
                 font-size: 1rem;
@@ -40,8 +40,8 @@ section {
             height: 250px;
             box-shadow: 5px 5px 10px 3px rgb(145, 143, 143);
             border-radius: 50px 0px;
-            opacity: 0;
-            transform: translateX(1000px);
+            // opacity: 0;
+            // transform: translateX(1000px);
 
             @media screen and (max-width: $tablet-size) {
                 width: 200px;
@@ -70,9 +70,9 @@ section {
         &>img {
             max-width: 300px;
             max-height: 300px;
-            transform: translateX(-500px);
-            opacity: 0;
-            transition: 1s;
+            // transform: translateX(-500px);
+            // opacity: 0;
+            // transition: 1s;
 
             @media screen and (max-width: 1200px) {
                 width: 200px;
@@ -136,7 +136,7 @@ section {
                     &:nth-child(3) {
                         width: 125px;
                         height: 150px;
-                        opacity: 0;
+                        // opacity: 0;
 
                         @media screen and (max-width: 1200px) {
                             width: 80px;

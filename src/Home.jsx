@@ -7,39 +7,44 @@ import logos from "./assets/img/logos.webp";
 import sassLogo from "./assets/img/sass.webp";
 import reactLogo from "./assets/img/react.png";
 import photoMS from "./assets/img/ms-color-resized.webp";
+import WindowSize from "./components/WindowSize";
 
 const Home = () => {
-	useEffect(() => {
-		// const userWidth =
-		// 	document.documentElement.clientWidth || window.innerWidth;
 
-		const aboutParagraph = document.querySelector(".content > p");
-		const aboutImg = document.querySelector("#about img");
-		const formationImg = document.querySelector(
-			"#formation .content > img"
-		);
-		const reactLogo = document.querySelector(".reactLogo");
+	let size = WindowSize();
+	console.log(size.width);
+	
+	// useEffect(() => {
+	// 	// const userWidth =
+	// 	// 	document.documentElement.clientWidth || window.innerWidth;
+	// 	const aboutParagraph = document.querySelector(".content > p");
+	// 	const aboutImg = document.querySelector("#about img");
+	// 	const formationImg = document.querySelector(
+	// 		"#formation .content > img"
+	// 		);
+			
+	// 		window.addEventListener("scroll", () => {
+	// 			const reactLogo = document.querySelector(".reactLogo");
 
-		window.addEventListener("scroll", () => {
-			let scrollValue =
-				(window.scrollY + window.innerHeight) /
-				document.body.offsetHeight;
+	// 		let scrollValue =
+	// 			(window.scrollY + window.innerHeight) /
+	// 			document.body.offsetHeight;
 
-			if (scrollValue > 0.4) {
-				aboutParagraph.style.animation =
-					"aboutParagraph 1s ease-out forwards";
-				aboutImg.style.animation =
-					"aboutImg 1.5s ease-out 0.5s forwards";
-			}
+	// 		if (scrollValue > 0.4) {
+	// 			aboutParagraph.style.animation =
+	// 				"aboutParagraph 1s ease-out forwards";
+	// 			aboutImg.style.animation =
+	// 				"aboutImg 1.5s ease-out 0.5s forwards";
+	// 		}
 
-			if (scrollValue > 0.55) {
-				reactLogo.style.animation =
-					"reactLogo 1.5s ease-out 1.5s forwards";
-				formationImg.style.opacity = 1;
-				formationImg.style.transform = "none";
-			}
-		});
-	}, []);
+	// 		if (scrollValue > 0.55) {
+	// 			reactLogo.style.animation =
+	// 				"reactLogo 1.5s ease-out 1.5s forwards";
+	// 			formationImg.style.opacity = 1;
+	// 			formationImg.style.transform = "none";
+	// 		}
+	// 	});
+	// }, []);
 
 	return (
 		<main>
