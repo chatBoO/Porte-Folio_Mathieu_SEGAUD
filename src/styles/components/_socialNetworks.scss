@@ -13,8 +13,8 @@
 
     @media screen and (max-width: $mobile-size) {
         top: 0px;
-        width: 60%;
-        height: 80px;
+        width: 50%;
+        height: 100px;
         padding: 0;
         background-color: transparent;
         z-index: 1;
@@ -26,6 +26,10 @@
 
         @media screen and (max-width: $tablet-size) {
             font-size: 0.8rem;
+        }
+
+        @media screen and (max-width: $mobile-size) {
+            font-size: 0.6rem;
         }
     }
 
@@ -47,6 +51,10 @@
 
                 @media screen and (max-width: $tablet-size) {
                     font-size: 1.5rem;
+                }
+
+                @media screen and (max-width: $mobile-size) {
+                    font-size: 1.3rem;
                 }
 
                 &:hover {
