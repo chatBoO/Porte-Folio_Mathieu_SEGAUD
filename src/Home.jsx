@@ -7,12 +7,12 @@ import logos from "./assets/img/logos.webp";
 import sassLogo from "./assets/img/sass.webp";
 import reactLogo from "./assets/img/react.png";
 import photoMS from "./assets/img/ms-color-resized.webp";
-import WindowSize from "./components/WindowSize";
+// import WindowSize from "./components/WindowSize";
 
 const Home = () => {
 
-	let size = WindowSize();
-	console.log(size.width);
+	// let size = WindowSize();
+	// console.log(size.width);
 	
 	// useEffect(() => {
 	// 	// const userWidth =

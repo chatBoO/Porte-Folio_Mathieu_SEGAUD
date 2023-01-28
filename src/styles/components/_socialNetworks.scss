@@ -12,12 +12,8 @@
     border-radius: 10px 10px 0 0;
 
     @media screen and (max-width: $mobile-size) {
-        top: 0px;
-        width: 60%;
-        height: 100px;
-        padding: 0;
-        background-color: transparent;
-        z-index: 1;
+        width: 50%;
+        padding: 0 10px;
     }
 
     & p {

@@ -1,53 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { Children, useEffect, useState } from "react";
 import photoMSColor from "../assets/img/logo.png";
 import SocialNetworks from "./SocialNetworks";
 
 const Header = () => {
-
-	const [isOpen, setIsOpen] = useState();
+	const [isOpen, setIsOpen] = useState(false);
 
 	useEffect(() => {
-		setIsOpen(false);
-
 		const headerNav = document.querySelector("#header-nav");
-
+		console.log(headerNav);
 		let lastScroll = 0;
 
 		window.addEventListener("scroll", () => {
 			if (window.scrollY < lastScroll) {
 				headerNav.style.top = 0 + "px";
 			} else {
-				headerNav.style.top = -100 + "px";
+				headerNav.style.top = -110 + "px";
 			}
 			lastScroll = window.scrollY;
 		});
 	}, []);
 
-	
 	const toogle = () => {
-		
-		const navContent = document.querySelector(".navContent");
 		const responsiveNavToggle =
 			document.querySelectorAll(".responsiveNav div");
+		const navContent = document.querySelector(".navContent");
 
 		if (isOpen === false) {
 			navContent.style.transform = "translateX(-800px)";
 			responsiveNavToggle.forEach((bar) => bar.classList.add("active"));
-
 		} else {
 			navContent.style.transform = "none";
-			responsiveNavToggle.forEach((bar) => bar.classList.remove("active"));
+			responsiveNavToggle.forEach((bar) =>
+				bar.classList.remove("active")
+			);
 		}
 	};
-
-	window.addEventListener("scroll", () => {
-		if (isOpen === true && window.innerWidth <= 768) {
-			navContent.style.transform = "none";
-			setIsOpen(false);
-		} else {
-			null;
-		}
-	});
 
 	return (
 		<header>
