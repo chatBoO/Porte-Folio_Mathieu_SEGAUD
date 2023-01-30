@@ -1,0 +1,48 @@
+.projects-container__projectCard {
+
+    &__text {
+        overflow: hidden;
+
+        h4 {
+            min-height: 40px;
+        }
+
+        p {
+            height: 200px;
+            font-size: 0.9rem;
+            text-align: justify;
+            line-height: 2rem;
+            overflow: auto;
+            
+        }
+    }
+    
+    &__cover {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        
+        img {
+            width: 100%;
+            max-width: 500px;
+            box-shadow: 3px 5px 5px 4px rgba(218, 211, 211, 0.719);
+            transition: 0.3s;
+            position: relative;
+
+            &:after {
+                content: "";
+                width: 100px;
+                height: 100px;
+                background-color: gray;
+                position: absolute;
+                font-size: 3rem;
+            }
+            
+            
+            &:hover {
+                box-shadow: 3px 5px 7px 7px rgb(160, 158, 158);
+                transform: scale(1.02);
+            }
+        }
+    }
+}

@@ -23,12 +23,24 @@ header {
         }
 
         @media screen and (max-width: $mobile-size) {
-            padding: 0 10px;
+            padding: 0 20px;
         }
 
-        .header-nav__logo img {
-            @media screen and (max-width: $mobile-size) {
-                width: 50px;
+        .header-nav {
+            &__logo img {
+
+                @media screen and (max-width: $mobile-size) {
+                    width: 50px;
+                }
+            }
+
+            &__menu {
+                color: $color6;
+                z-index: 2;
+
+                @media screen and (min-width: $mobile-size) {
+                    display: none;
+                }
             }
         }
 

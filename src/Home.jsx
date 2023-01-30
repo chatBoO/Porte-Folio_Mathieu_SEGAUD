@@ -10,10 +10,9 @@ import photoMS from "./assets/img/ms-color-resized.webp";
 // import WindowSize from "./components/WindowSize";
 
 const Home = () => {
-
 	// let size = WindowSize();
 	// console.log(size.width);
-	
+
 	// useEffect(() => {
 	// 	// const userWidth =
 	// 	// 	document.documentElement.clientWidth || window.innerWidth;
@@ -22,7 +21,7 @@ const Home = () => {
 	// 	const formationImg = document.querySelector(
 	// 		"#formation .content > img"
 	// 		);
-			
+
 	// 		window.addEventListener("scroll", () => {
 	// 			const reactLogo = document.querySelector(".reactLogo");
 
@@ -46,17 +45,34 @@ const Home = () => {
 	// 	});
 	// }, []);
 
+	const yearsDiff = (date) => {
+		const currentYear = new Date();
+		const dateChoiced = new Date(date);
+
+		let tmp = currentYear - dateChoiced;
+
+		tmp = Math.floor(tmp / 31536000000).toFixed(0);
+
+		return tmp;
+	};
+	const myAge = yearsDiff("1990-03-21");
+	const carrefourDuration = yearsDiff("2014-05-02");
+
 	return (
 		<main>
 			<section id="about">
 				<h3>Présentation :</h3>
 				<div className="content">
 					<p>
-						Je suis Mathieu SEGAUD. 32 ans, en couple, papa accompli
-						et passionné par le code, j'ai décidé de reprendre ma
-						vie en main en 2022 et de me lancer dans le
-						développement. Vous trouverez des exemples de
-						réalisations dans la section "projets".
+						Bonjour, je suis Mathieu SEGAUD, {myAge} ans, en couple,
+						et passionné de code. Après plus de {carrefourDuration}{" "}
+						ans en tant que conseiller commercial au sein de
+						l'espace multimédia Carrefour®, j'ai pu aquérir de
+						nombreuses compétences professionnelles et
+						relationnelles, telles que l'écoute, le respect des
+						consignes, le travaille en équipe, l'autonomie... j'ai
+						décidé de reprendre ma vie en main en 2022 et de me
+						lancer dans le développement.
 					</p>
 					<img src={photoMS} alt="Mathieu SEGAUD" />
 				</div>
@@ -68,10 +84,12 @@ const Home = () => {
 					<img src={pc} alt="developpeur web" />
 					<div className="content__text">
 						<p>
-							Diplômé d'une formation développeur-web, je dispose
-							des compétences nécessaires à la réalisation de
-							projets demandant l'utilisation de langages tels que
-							HTML, CSS, Sass, Javascript ou encore... React !
+							Diplômé d'une formation développeur-web et de
+							plusieurs projets, je dispose des compétences
+							nécessaires à la réalisation de projets demandant
+							l'utilisation de langages front-end tels que HTML,
+							CSS, Sass, Javascript ou encore... React ! Ainsi que
+							MongoDB, Express, Firebase pour le back-end.
 						</p>
 						<div className="content__text__logos">
 							<img src={logos} alt="logos" />
@@ -86,15 +104,15 @@ const Home = () => {
 				</div>
 			</section>
 
-			<section id="projets">
-				<h3>Projets :</h3>
+			<section id="projects">
+				<h3>Mes projets :</h3>
 				<div className="projects-container">
-					{projects.map(({ id, title, content, picture }) => (
+					{projects.map(({ id, title, content, cover }) => (
 						<ProjectCard
 							key={id}
 							title={title}
 							content={content}
-							picture={picture}
+							cover={cover}
 						/>
 					))}
 				</div>

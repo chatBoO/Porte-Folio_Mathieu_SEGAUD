@@ -15,3 +15,7 @@ body {
         max-width: 1800px;
     }
 }
+
+h3 {
+    @include h3;
+}

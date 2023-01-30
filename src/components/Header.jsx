@@ -1,13 +1,13 @@
-import React, { Children, useEffect, useState } from "react";
-import photoMSColor from "../assets/img/logo.png";
+import React, { useEffect, useState } from "react";
+import LogoSite from "../assets/img/logo.webp";
 import SocialNetworks from "./SocialNetworks";
+import WindowSize from "./WindowSize";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
-
+	
 	useEffect(() => {
 		const headerNav = document.querySelector("#header-nav");
-		console.log(headerNav);
 		let lastScroll = 0;
 
 		window.addEventListener("scroll", () => {
@@ -21,8 +21,7 @@ const Header = () => {
 	}, []);
 
 	const toogle = () => {
-		const responsiveNavToggle =
-			document.querySelectorAll(".responsiveNav div");
+		const responsiveNavToggle = document.querySelectorAll(".responsiveNav div");
 		const navContent = document.querySelector(".navContent");
 
 		if (isOpen === false) {
@@ -41,9 +40,12 @@ const Header = () => {
 			<div id="header-nav">
 				<div className="header-nav__logo">
 					<a href="/">
-						<img src={photoMSColor} alt="Photo-logo-accueil" />
+						<img src={LogoSite} alt="Photo-logo-accueil" />
 					</a>
 				</div>
+
+				<h2 className="header-nav__menu">MENU</h2>
+
 				<div
 					className="responsiveNav"
 					onClick={() => {
@@ -55,6 +57,8 @@ const Header = () => {
 					<div id="div2"></div>
 					<div id="div3"></div>
 				</div>
+
+
 				<nav>
 					<div className="navContent">
 						<ul>
@@ -80,9 +84,9 @@ const Header = () => {
 
 			<section>
 				<div>
-					<h1>Développeur Front-end </h1>
+					<h1>Développeur junior Front-end</h1>
 					<h2>
-						Jeune développeur en constante évolution pour vos
+						En constante évolution pour vos
 						projets...
 					</h2>
 					<a href="#contact" className="btn">
