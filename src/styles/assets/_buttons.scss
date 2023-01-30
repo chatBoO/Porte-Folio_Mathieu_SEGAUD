@@ -1,6 +1,6 @@
 .btn {
     font-size: 1.5rem;
-    background: url("../../../src/assets/img/fond-bois.webp");
+    background: url("../../assets/img/fondBois.webp");
     border: 1px solid gray;
     border-radius: 25px;
     padding: 10px;
@@ -9,6 +9,6 @@
     text-decoration: none;
 
     @media screen and (max-width: $mobile-size) {
-            font-size: 1rem;
-        }
+        font-size: 1rem;
+    }
 }
