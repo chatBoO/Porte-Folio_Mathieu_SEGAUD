@@ -19,6 +19,7 @@ $background3: rgb(250, 240, 212);
 $pc-size: 1400px;
 $tablet-size: 992px;
 $mobile-size: 768px;
+$min-size: 500px;
 
 @mixin h1 {
     font-size: 4.5rem;
@@ -32,6 +33,13 @@ $mobile-size: 768px;
     font-size: 2rem;
     font-family: $font2;
     position: relative;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: $mobile-size) {
+        font-size: 1.5rem;
+        text-align: center;
+    }
 
     &:after {
         content: "";
@@ -41,5 +49,11 @@ $mobile-size: 768px;
         width: 50%;
         height: 2px;
         background-color: rgba(128, 128, 128, 0.466);
+
+        @media screen and (max-width: $mobile-size) {
+            width: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
     }
 }

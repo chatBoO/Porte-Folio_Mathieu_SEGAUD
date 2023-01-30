@@ -26,11 +26,11 @@ header {
             padding: 0 10px;
         }
 
-        // .header-nav__logo img {
-        //     @media screen and (max-width: $mobile-size) {
-        //         width: 50px;
-        //     }
-        // }
+        .header-nav__logo img {
+            @media screen and (max-width: $mobile-size) {
+                width: 50px;
+            }
+        }
 
         .responsiveNav {
             @media screen and (max-width: $mobile-size) {
@@ -228,7 +228,7 @@ header {
                 font-size: 3rem;
             }
 
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: $min-size) {
                 font-size: 2.5rem;
             }
         }
@@ -240,7 +240,7 @@ header {
                 font-size: 2rem;
             }
 
-            @media screen and (max-width: 500px) {
+            @media screen and (max-width: $min-size) {
                 font-size: 1.5rem;
             }
         }

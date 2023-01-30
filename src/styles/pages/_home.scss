@@ -15,23 +15,40 @@ section {
         justify-content: space-between;
         width: 75%;
 
-      @media screen and (max-width: $tablet-size) {
-                width: 90%;
-            }
+        @media screen and (max-width: $tablet-size) {
+            width: 90%;
+        }
+
+        @media screen and (max-width: $mobile-size) {
+            width: 100%;
+        }
+
+        @media screen and (max-width: $min-size) {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+        }
 
         p {
             width: 55%;
             text-align: justify;
-            line-height: 2.5rem;
             font-size: 1.3rem;
+            line-height: 2.5rem;
             margin: 0;
             // opacity: 0;
             // transform: translateX(-500px);
 
-          @media screen and (max-width: $tablet-size) {
+            @media screen and (max-width: $tablet-size) {
                 font-size: 1rem;
                 display: flex;
                 align-items: center;
+            }
+
+            @media screen and (max-width: $min-size) {
+                width: 100%;
+                line-height: 2rem;
+                order: 2;
+                padding: 20px 0 0 0;
             }
         }
 
@@ -47,6 +64,17 @@ section {
                 width: 200px;
                 height: 200px;
             }
+
+            @media screen and (max-width: $mobile-size) {
+                width: 180px;
+                height: 180px;
+                border-radius: 0px;
+            }
+
+            @media screen and (max-width: $min-size) {
+                border-radius: 0px;
+                order: 1;
+            }
         }
     }
 }
@@ -60,12 +88,25 @@ section {
         @include h3;
     }
 
+    @media screen and (max-width: $mobile-size) {
+        padding: 20px;
+    }
+
+    @media screen and (max-width: $min-size) {
+        padding: 10;
+    }
+
     .content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
         padding: 10px 0px 10px 30px;
+
+        @media screen and (max-width: $mobile-size) {
+            justify-content: center;
+            padding: 0;
+        }
 
         &>img {
             max-width: 300px;
@@ -78,6 +119,10 @@ section {
                 width: 200px;
                 height: 200px;
             }
+
+            @media screen and (max-width: $mobile-size) {
+                display: none;
+            }
         }
 
         &__text {
@@ -87,6 +132,15 @@ section {
             width: 70%;
             padding: 0px 0px 0px 20px;
 
+            @media screen and (max-width: $mobile-size) {
+                width: 100%;
+                padding: 0;
+            }
+
+            @media screen and (max-width: $min-size) {
+                align-items: center;
+            }
+
             p {
                 width: 100%;
                 text-align: justify;
@@ -94,9 +148,20 @@ section {
                 font-size: 1.3rem;
                 margin: 0;
 
-              @media screen and (max-width: $tablet-size) {
-                        font-size: 1rem;
-                    }
+                @media screen and (max-width: $tablet-size) {
+                    font-size: 1rem;
+                }
+
+                @media screen and (max-width: $mobile-size) {
+                    width: 80%;
+                    font-size: 1rem;
+                    line-height: 2rem;
+                }
+
+                @media screen and (max-width: $min-size) {
+                    width: 100%;
+                    padding-bottom: 10px;
+                }
             }
 
             &__logos {
@@ -110,38 +175,25 @@ section {
                     justify-content: space-between;
                 }
 
-              @media screen and (max-width: $tablet-size) {
+                @media screen and (max-width: $tablet-size) {
                     width: 100%;
                     justify-content: space-between;
                 }
 
                 img {
-                    margin-right: 10px;
+                    object-fit: contain;
 
                     &:nth-child(1) {
-                        width: 300px;
-                        height: 168px;
-
-                        @media screen and (max-width: 1200px) {
-                            width: 200px;
-                            height: 110px;
-                        }
+                        width: 30%;
                     }
 
                     &:nth-child(2) {
-                        width: 100px;
-                        height: 80px;
+                        width: 20%;
                     }
 
                     &:nth-child(3) {
-                        width: 125px;
-                        height: 150px;
+                        width: 15%;
                         // opacity: 0;
-
-                        @media screen and (max-width: 1200px) {
-                            width: 80px;
-                            height: 100px;
-                        }
                     }
                 }
             }
