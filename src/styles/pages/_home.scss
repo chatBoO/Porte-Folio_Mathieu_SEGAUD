@@ -1,11 +1,10 @@
 section {
-    padding: 20px;
+    // padding: 20px;
+    min-height: 50vh;
 }
 
 #about {
-    min-height: 30vh;
     overflow-x: hidden;
-
 
     .content {
         display: flex;

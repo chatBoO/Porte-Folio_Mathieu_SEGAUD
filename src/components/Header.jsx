@@ -5,7 +5,7 @@ import WindowSize from "./WindowSize";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	
+
 	useEffect(() => {
 		const headerNav = document.querySelector("#header-nav");
 		let lastScroll = 0;
@@ -21,7 +21,8 @@ const Header = () => {
 	}, []);
 
 	const toogle = () => {
-		const responsiveNavToggle = document.querySelectorAll(".responsiveNav div");
+		const responsiveNavToggle =
+			document.querySelectorAll(".responsiveNav div");
 		const navContent = document.querySelector(".navContent");
 
 		if (isOpen === false) {
@@ -58,7 +59,6 @@ const Header = () => {
 					<div id="div3"></div>
 				</div>
 
-
 				<nav>
 					<div className="navContent">
 						<ul>
@@ -69,7 +69,7 @@ const Header = () => {
 								<a href="#formation">Formation</a>
 							</li>
 							<li>
-								<a href="#projets">Projets</a>
+								<a href="#projects">Projets</a>
 							</li>
 							<li>
 								<a href="#contact">Contact</a>
@@ -84,11 +84,8 @@ const Header = () => {
 
 			<section>
 				<div>
-					<h1>Développeur junior Front-end</h1>
-					<h2>
-						En constante évolution pour vos
-						projets...
-					</h2>
+					<h1>Développeur web junior Front-end</h1>
+					<h2>En constante évolution pour vos projets...</h2>
 					<a href="#contact" className="btn">
 						Contactez moi
 					</a>
