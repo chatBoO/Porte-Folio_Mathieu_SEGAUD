@@ -1,6 +1,5 @@
 section {
-    // padding: 20px;
-    min-height: 50vh;
+    padding: 30px 50px 120px;
 }
 
 #about {
@@ -80,22 +79,21 @@ section {
 #formation {
     background: $background1;
     overflow-x: hidden;
-    padding: 0 40px 0 0;
+    // padding: 0 40px 0 0;
 
-    @media screen and (max-width: $mobile-size) {
-        padding: 20px;
-    }
+    // @media screen and (max-width: $mobile-size) {
+    //     padding: 20px;
+    // }
 
-    @media screen and (max-width: $min-size) {
-        padding: 10;
-    }
+    // @media screen and (max-width: $min-size) {
+    //     padding: 10px;
+    // }
 
     .content {
         display: flex;
         justify-content: space-between;
         align-items: center;
         width: 100%;
-        padding: 10px 0px 10px 30px;
 
         @media screen and (max-width: $mobile-size) {
             justify-content: center;
@@ -114,7 +112,7 @@ section {
                 height: 200px;
             }
 
-            @media screen and (max-width: $mobile-size) {
+            @media screen and (max-width: $tablet-size) {
                 display: none;
             }
         }
@@ -124,7 +122,10 @@ section {
             flex-direction: column;
             justify-content: space-between;
             width: 70%;
-            padding: 0px 0px 0px 20px;
+
+            @media screen and (max-width: $tablet-size) {
+                width: 100%;
+            }
 
             @media screen and (max-width: $mobile-size) {
                 width: 100%;
@@ -140,14 +141,14 @@ section {
                 text-align: justify;
                 line-height: 2.5rem;
                 font-size: 1.3rem;
-                margin: 0;
+                padding-bottom: 20px;
 
                 @media screen and (max-width: $tablet-size) {
                     font-size: 1.2rem;
                 }
 
                 @media screen and (max-width: $mobile-size) {
-                    width: 80%;
+                    width: 100%;
                     font-size: 1.2rem;
                     line-height: 2rem;
                 }
@@ -165,7 +166,7 @@ section {
                 width: 100%;
 
                 @media screen and (max-width: 1400px) {
-                    width: 80%;
+                    width: 100%;
                     justify-content: space-between;
                 }
 
@@ -178,15 +179,15 @@ section {
                     object-fit: contain;
 
                     &:nth-child(1) {
-                        width: 25%;
+                        width: 30%;
                     }
 
                     &:nth-child(2) {
-                        width: 15%;
+                        width: 20%;
                     }
 
                     &:nth-child(3) {
-                        width: 15%;
+                        width: 20%;
                         // opacity: 0;
                     }
                 }
