@@ -1,12 +1,11 @@
-import React, { useEffect } from "react";
+import React from "react";
 import FormTemplate from "./components/FormTemplate";
-import ProjectCard from "./components/ProjectCard";
-import { projects } from "./data/projects";
 import pc from "./assets/img/pc.webp";
 import logos from "./assets/img/logos.webp";
 import sassLogo from "./assets/img/sass.webp";
 import reactLogo from "./assets/img/react.png";
 import photoMS from "./assets/img/ms-color-resized.webp";
+import MyProjects from "./components/MyProjects";
 // import WindowSize from "./components/WindowSize";
 
 const Home = () => {
@@ -104,19 +103,7 @@ const Home = () => {
 				</div>
 			</section>
 
-			<section id="projects">
-				<h3>Mes projets :</h3>
-				<div className="projects-container">
-					{projects.map(({ id, title, content, cover }) => (
-						<ProjectCard
-							key={id}
-							title={title}
-							content={content}
-							cover={cover}
-						/>
-					))}
-				</div>
-			</section>
+			<MyProjects />
 
 			<section className="contact-form" id="contact">
 				<h3>Me contacter</h3>

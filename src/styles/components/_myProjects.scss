@@ -1,0 +1,16 @@
+#myProjects {
+    @media screen and (max-width: $tablet-size) {
+        padding: 30px 15px 50px;
+    }
+
+    .projects-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, 40%);
+        justify-content: space-evenly;
+        gap: 100px;
+
+        @media screen and (max-width: $mobile-size) {
+            grid-template-columns: 1fr;
+        }
+    }
+}

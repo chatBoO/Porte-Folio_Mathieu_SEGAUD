@@ -191,23 +191,6 @@ section {
     }
 }
 
-#projects {
-    @media screen and (max-width: $tablet-size) {
-        padding: 30px 15px 50px;
-    }
-
-    .projects-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 47%);
-        gap: 40px;
-        justify-content: space-between;
-
-        @media screen and (max-width: $mobile-size) {
-            grid-template-columns: 1fr;
-        }
-    }
-}
-
 #contact {
     background: $background1;
 }
