@@ -20,39 +20,3 @@ $pc-size: 1400px;
 $tablet-size: 992px;
 $mobile-size: 768px;
 $min-size: 500px;
-
-@mixin h1 {
-    font-size: 4.5rem;
-}
-
-@mixin h2 {
-    font-size: 2.5rem;
-}
-
-@mixin h3 {
-    font-size: 2rem;
-    font-family: $font2;
-    position: relative;
-    margin-bottom: 50px;
-
-    @media screen and (max-width: $mobile-size) {
-        font-size: 1.5rem;
-        text-align: center;
-    }
-
-    &:after {
-        content: "";
-        position: absolute;
-        left: 0px;
-        bottom: 0px;
-        width: 50%;
-        height: 2px;
-        background-color: rgba(128, 128, 128, 0.466);
-
-        @media screen and (max-width: $mobile-size) {
-            width: 60%;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-    }
-}

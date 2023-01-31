@@ -29,14 +29,14 @@ export const projects = [
 	},
 	{
 		id: 5,
-		title: "Piiquante - Construire une API sécurisée pour une application d'avis gastronomiques",
+		title: "Piiquante - Construire une API sécurisée",
 		content:
 			"A partir d'un front existant, mettre en place une API permettant d'ajouter, de manipuler et de noter des sauces piquantes. C'est devenu possible grâce à l'initialisation d'un routeur, de la création des différentes routes du C.R.U.D et d'un système d'authenfication par token pour sécuriser les requêtes. L'API utilise MongoDB Atlas pour la sauvegarde des données.",
 		cover: "/img/images-projets/piiquante.webp",
 	},
 	{
 		id: 6,
-		title: "Kasa - Créer une application web de location immobilière avec React",
+		title: "Kasa - Créer une application web avec React",
 		content:
 			"Grâce à REACT et à l'utilisation de composants fonctionnels réutilisables, cette application dispose de bonnes performances d'affichage et de SEO. Elle dispose d'un sytème de routes et affiche les logements disponibles ainsi que leur fiche détaillée.",
 		cover: "/img/images-projets/kasa.webp",

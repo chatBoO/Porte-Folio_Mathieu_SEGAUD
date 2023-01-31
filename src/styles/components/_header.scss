@@ -141,6 +141,7 @@ header {
                     align-items: center;
                     min-width: 150px;
                     height: 100%;
+                    color: $color1;
 
                     &:hover {
                         background-color: lighten($color: #0e0d0d3a, $amount: 30)
@@ -234,7 +235,6 @@ header {
         }
 
         h1 {
-            @include h1;
 
             @media screen and (max-width: $mobile-size) {
                 font-size: 3rem;
@@ -246,7 +246,6 @@ header {
         }
 
         h2 {
-            @include h2;
 
             @media screen and (max-width: $mobile-size) {
                 font-size: 2rem;
