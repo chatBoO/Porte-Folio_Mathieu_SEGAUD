@@ -11,6 +11,10 @@
         padding: 0px 50px 20px;
     }
 
+        @media screen and (min-width: 1200px) and (max-width: $pc-size) {
+            padding: 0px 30px 20px;
+        }
+
     &__text {
         overflow: hidden;
 
@@ -89,7 +93,6 @@
                 opacity: 1;
                 cursor: pointer;
             }
-            
         }
         
         img {
@@ -107,21 +110,3 @@
     }
 }
 
-.modal {
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    background-color: $background6;
-    z-index: 2;
-
-    &__container {
-        width: 60%;
-        height: 60vh;
-        background: $background4;
-    }
-}

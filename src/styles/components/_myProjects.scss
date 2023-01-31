@@ -9,6 +9,16 @@
         justify-content: space-evenly;
         gap: 100px;
 
+        @media screen and (min-width: 1200px) and (max-width: 1400px) {
+            grid-template-columns: repeat(auto-fit, 47%);
+            gap: 80px 30px;
+        }
+
+        @media screen and (min-width: $mobile-size) and (max-width: 1200px) {
+            grid-template-columns: repeat(auto-fit, 47%);
+            gap: 80px 30px;
+        }
+
         @media screen and (max-width: $mobile-size) {
             grid-template-columns: 1fr;
         }
