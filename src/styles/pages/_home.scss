@@ -1,5 +1,9 @@
 section {
     padding: 30px 50px 120px;
+
+    @media screen and (max-width: $mobile-size) {
+        padding: 30px 30px 100px;
+    }
 }
 
 #about {
@@ -180,14 +184,17 @@ section {
 
                     &:nth-child(1) {
                         width: 30%;
+                        max-width: 200px;
                     }
-
+                    
                     &:nth-child(2) {
                         width: 20%;
+                        max-width: 150px;
                     }
-
+                    
                     &:nth-child(3) {
                         width: 20%;
+                        max-width: 150px;
                         // opacity: 0;
                     }
                 }
