@@ -1,7 +1,14 @@
 .projects-container__projectCard {
-    padding: 0px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0px 10px 20px;
     box-shadow: 3px 5px 5px 4px rgba(218, 211, 211, 0.719);
     border-radius: 15px;
+
+    @media screen and (min-width: $pc-size) {
+        padding: 0px 50px 20px;
+    }
 
     &__text {
         overflow: hidden;
@@ -11,6 +18,8 @@
             display: flex;
             align-items: center;
             min-height: 120px;
+
+            
 
             &:after {
                 position: absolute;
@@ -23,12 +32,16 @@
         }
 
         p {
-            height: 200px;
-            font-size: 0.9rem;
+            min-height: 160px;
+            font-size: 1rem;
             text-align: justify;
             line-height: 2rem;
             overflow: auto;
+            padding: 5px;
 
+            @media screen and (max-width: $min-size) {
+                font-size: 0.8rem;
+            }
         }
     }
 
@@ -42,16 +55,8 @@
             max-width: 500px;
             box-shadow: 2px 3px 3px 2px rgba(243, 240, 240, 0.719);
             transition: 0.3s;
-            position: relative;
-
-            &:after {
-                content: "";
-                width: 100px;
-                height: 100px;
-                background-color: gray;
-                position: absolute;
-                font-size: 3rem;
-            }
+            border: 1px solid rgba(58, 57, 57, 0.096);
+            // position: relative;
 
 
             &:hover {

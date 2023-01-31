@@ -223,6 +223,10 @@ header {
         align-items: center;
         height: 100vh;
 
+        @media screen and (max-width: $min-size) {
+            padding: 30px 20px;
+        }
+
         div {
             display: flex;
             flex-direction: column;
