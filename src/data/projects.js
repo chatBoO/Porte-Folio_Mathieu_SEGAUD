@@ -10,8 +10,14 @@ export const projects = [
 			"/img/images-carrousel/booki/3.png",
 		],
 		languages: [
-			"HTML",
-			"CSS",
+			{
+				nom: "HTML",
+				logo: "/img/logos-langages/html.webp",
+			},
+			{
+				nom: "CSS",
+				logo: "/img/logos-langages/html.webp",
+			},
 		],
 	},
 	{

@@ -11,7 +11,6 @@ const Modal = ({ projectId }) => {
 
 	if (currentProject) {
 		const { id, title, text, cover, pictures, languages } = currentProject;
-		console.log(languages);
 
 		return (
 			<article className="modal-container">
@@ -28,9 +27,9 @@ const Modal = ({ projectId }) => {
 					<h3>{title.split("-")[0]}</h3>
 
 					<div className="languages-container">
-						{languages.map((language, index) => (
-							<span key={language + index} className="languages">
-								{language}
+						{languages.map(({ nom, logo }) => (
+							<span key={nom} className="languages">
+								<img src={logo} alt={nom} /> {nom}
 							</span>
 						))}
 					</div>
