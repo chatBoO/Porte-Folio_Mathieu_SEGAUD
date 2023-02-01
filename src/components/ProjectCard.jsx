@@ -1,7 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
+import Carrousel from "./Carrousel";
 
-const ProjectCard = ({ id, title, text, cover }) => {
-	
+const ProjectCard = ({ id, title, text, cover, setProjectId }) => {
 	const modalPreview = () => {
 		document.querySelector(".modal-container").classList.toggle("active");
 	};
@@ -14,7 +14,10 @@ const ProjectCard = ({ id, title, text, cover }) => {
 			</div>
 			<div
 				className="projects-container__projectCard__cover"
-				onClick={modalPreview}
+				onClick={() => {
+					modalPreview();
+					setProjectId(id);
+				}}
 			>
 				<img src={cover} alt={title} />
 			</div>

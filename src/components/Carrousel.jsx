@@ -1,8 +1,6 @@
-import React, { useEffect, useState } from "react";
-import LeftArrow from "../assets/img/left_arrow.png";
-import RightArrow from "../assets/img/right_arrow.png";
+import React, { useState } from "react";
 
-const Carrousel = () => {
+const Carrousel = ({ pictures, title, id }) => {
 	const [currentPicture, setCurrentPicture] = useState(0);
 
 	const goToLeft = () => {
@@ -34,21 +32,17 @@ const Carrousel = () => {
 			))}
 
 			{pictures.length > 1 && ( // Affichage des flèches uniquement si le tableau "pictures" contient plus d'une image
-				<img
-					src={LeftArrow}
-					alt="Flèche gauche"
-					className="carrousel__left-arrow"
+				<i
+					className="fa-solid fa-chevron-left carrousel__left-arrow"
 					onClick={goToLeft}
-				/>
+				></i>
 			)}
 
 			{pictures.length > 1 && (
-				<img
-					src={RightArrow}
-					alt="flèche droite"
-					className="carrousel__right-arrow"
+				<i
+					className="fa-solid fa-chevron-right carrousel__right-arrow"
 					onClick={goToRight}
-				/>
+				></i>
 			)}
 
 			<span className="carrousel__image-number">

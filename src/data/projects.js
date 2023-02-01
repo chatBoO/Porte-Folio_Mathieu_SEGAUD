@@ -5,9 +5,13 @@ export const projects = [
 		text: "Le projet Booki a pour but de transformer une maquette, réalisée sur Figma, en site internet en utilisant les langages HTML/CSS. Mais aussi uniformiser son affichage sur les différents navigateurs et le rendre responsive sur 3 tailles (desktop, tablette et mobile) à l'aide de Media Queries.",
 		cover: "/img/images-projets/booki.webp",
 		pictures: [
-			"/img/images-carrousel/1.png",
-			"/img/images-carrousel/2.png",
-			"/img/images-carrousel/3.png",
+			"/img/images-carrousel/booki/1.png",
+			"/img/images-carrousel/booki/2.png",
+			"/img/images-carrousel/booki/3.png",
+		],
+		languages: [
+			"HTML",
+			"CSS",
 		],
 	},
 	{
