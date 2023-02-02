@@ -3,6 +3,7 @@ import { projects } from "../data/projects";
 import Carrousel from "./Carrousel";
 
 const Modal = ({ projectId }) => {
+
 	const modalPreview = () => {
 		document.querySelector(".modal-container").classList.toggle("active");
 	};
@@ -38,6 +39,10 @@ const Modal = ({ projectId }) => {
 				</div>
 			</article>
 		);
+	} else {
+		 return ( 
+			<article className="modal-container"></article>
+		 )
 	}
 };
 
