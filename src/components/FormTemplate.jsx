@@ -41,13 +41,13 @@ const FormTemplate = () => {
 	return (
 		<div className="form-container">
 			<form ref={form} onSubmit={sendEmail}>
-				<label>Nom, prénom / société</label>
+				<label for="name">Nom, prénom / société</label>
 				<input type="text" name="name" required autoComplete="off" />
-				<label>Email</label>
+				<label for="email">Email</label>
 				<input type="email" name="email" required autoComplete="off" />
-				<label>Objet</label>
+				<label for="object">Objet</label>
 				<input type="text" name="object" required autoComplete="off" />
-				<label>Message</label>
+				<label for="message">Message</label>
 				<textarea name="message"required />
 				<input type="submit" value="Envoyer" />
 			</form>
