@@ -8,6 +8,10 @@ export const projects = [
 			"/img/images-carrousel/booki/1.png",
 			"/img/images-carrousel/booki/2.png",
 			"/img/images-carrousel/booki/3.png",
+			"/img/images-carrousel/booki/4.png",
+			"/img/images-carrousel/booki/5.png",
+			"/img/images-carrousel/booki/6.png",
+			"/img/images-carrousel/booki/7.png",
 		],
 		languages: [
 			{
@@ -16,15 +20,47 @@ export const projects = [
 			},
 			{
 				nom: "CSS",
-				logo: "/img/logos-langages/html.webp",
+				logo: "/img/logos-langages/css.webp",
 			},
 		],
+		site: "https://chatboo.github.io/p2-booki/",
+		code: "https://github.com/chatBoO/p2-booki",
 	},
 	{
 		id: 2,
 		title: "Oh my food ! - Dynamisez une page web avec des animations CSS",
 		text: 'Ce projet "Ohmyfood" a été développé avec Sass en mobile-first puis rendu responsive dans les formats tablette et desktop. En utilisant les animations CSS existantes il a été dynamisé afin de rendre l\'expérience utilisateur plus ludique et agréable, en y ajoutant des effets d\'apparition, d\'opacité et de transitions en utilisant des "keyframes".',
 		cover: "/img/images-projets/ohMyFood.webp",
+		pictures: [
+			"/img/images-carrousel/ohmyfood/1.png",
+			"/img/images-carrousel/ohmyfood/2.png",
+			"/img/images-carrousel/ohmyfood/3.png",
+			"/img/images-carrousel/ohmyfood/4.png",
+			"/img/images-carrousel/ohmyfood/5.png",
+			"/img/images-carrousel/ohmyfood/6.png",
+			"/img/images-carrousel/ohmyfood/7.png",
+			"/img/images-carrousel/ohmyfood/8.png",
+			"/img/images-carrousel/ohmyfood/9.png",
+			"/img/images-carrousel/ohmyfood/10.png",
+			"/img/images-carrousel/ohmyfood/11.png",
+			"/img/images-carrousel/ohmyfood/12.png",
+		],
+		languages: [
+			{
+				nom: "HTML",
+				logo: "/img/logos-langages/html.webp",
+			},
+			{
+				nom: "CSS",
+				logo: "/img/logos-langages/css.webp",
+			},
+			{
+				nom: "Sass",
+				logo: "/img/logos-langages/sass.webp",
+			},
+		],
+		site: "https://chatboo.github.io/p3-oh_my_food/",
+		code: "https://github.com/chatBoO/p3-oh_my_food",
 	},
 	{
 		id: 3,

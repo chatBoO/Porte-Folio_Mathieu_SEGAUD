@@ -7,7 +7,7 @@ const Modal = ({ projectId }) => {
 		document.querySelector(".modal-container").classList.toggle("active");
 	};
 
-	const currentProject = projects.find((projet) => projet.id == projectId);
+	const currentProject = projects.find((projet) => projet.id === projectId);
 
 	if (currentProject) {
 		const { id, title, text, cover, pictures, languages } = currentProject;
@@ -28,7 +28,7 @@ const Modal = ({ projectId }) => {
 
 					<div className="languages-container">
 						{languages.map(({ nom, logo }) => (
-							<span key={nom} className="languages">
+							<span key={nom} className="languages-container__languages">
 								<img src={logo} alt={nom} /> {nom}
 							</span>
 						))}

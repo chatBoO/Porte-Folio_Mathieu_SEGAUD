@@ -11,9 +11,9 @@
         padding: 0px 50px 20px;
     }
 
-        @media screen and (min-width: 1200px) and (max-width: $pc-size) {
-            padding: 0px 30px 20px;
-        }
+    @media screen and (min-width: 1200px) and (max-width: $pc-size) {
+        padding: 0px 30px 20px;
+    }
 
     &__text {
         overflow: hidden;
@@ -35,7 +35,7 @@
         }
 
         p {
-            min-height: 160px;
+            height: 180px;
             font-size: 1rem;
             text-align: justify;
             line-height: 2rem;
@@ -54,7 +54,7 @@
         justify-content: center;
         position: relative;
         border-radius: 15px;
-        
+
         &:before {
             position: absolute;
             content: "";
@@ -70,7 +70,7 @@
             transition: 0.2s;
             border-radius: 15px;
         }
-        
+
         &:after {
             position: absolute;
             content: "\2b";
@@ -84,17 +84,18 @@
         }
 
         &:hover {
-            
+
             &:before {
                 opacity: 1;
                 cursor: pointer;
             }
+
             &:after {
                 opacity: 1;
                 cursor: pointer;
             }
         }
-        
+
         img {
             width: 100%;
             max-width: 500px;
@@ -102,11 +103,48 @@
             transition: 0.3s;
             border: 1px solid rgba(58, 57, 57, 0.096);
             border-radius: 15px;
-            
+
             &:hover {
                 box-shadow: 3px 4px 5px 5px rgb(160, 158, 158);
             }
         }
+
+    }
+
+    &__links {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        i {
+            color: $color3;
+            padding: 10px;
+        }
+
+        a {
+            margin-top: 10px;
+            border-radius: 20px;
+            text-decoration: none;
+
+        }
+
+        .code-link:hover {
+            animation: codeLink 1s ease-in-out alternate infinite;
+        }
+        .site-link:hover {
+            animation: siteLink 1s ease-in-out alternate infinite;
+        }
+
+        @keyframes codeLink {
+            to {
+                transform: translate(-30%);
+            }
+        }
+
+        @keyframes siteLink {
+            to {
+                transform: translate(30%);
+            }
+        }
     }
 }
-

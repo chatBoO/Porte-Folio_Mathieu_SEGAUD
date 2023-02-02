@@ -10,13 +10,15 @@ const MyProjects = () => {
 		<section id="myProjects">
 			<h3>Mes projets :</h3>
 			<div className="projects-container">
-				{projects.map(({ id, title, text, cover }) => (
+				{projects.map(({ id, title, text, cover, site, code }) => (
 					<ProjectCard
 						key={id}
 						id={id}
 						title={title}
 						text={text}
 						cover={cover}
+						site={site}
+						code={code}
 						setProjectId={setProjectId}
 					/>
 				))}

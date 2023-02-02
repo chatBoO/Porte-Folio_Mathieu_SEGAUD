@@ -76,7 +76,10 @@ const Header = () => {
 							</li>
 						</ul>
 						<div className="cv">
-							<a href="#cv">Télécharger mon CV</a>
+							<a href="#cv">
+								<i className="fa-solid fa-download"></i>
+								Télécharger mon CV
+							</a>
 						</div>
 					</div>
 				</nav>

@@ -178,11 +178,12 @@ header {
                             transform: scale(1.2);
                             color: $color2;
                         }
+
                     }
                 }
-
+                
             }
-
+            
             .cv {
                 display: flex;
                 justify-content: center;
@@ -191,31 +192,35 @@ header {
                 border: 1px solid $color3;
                 border-radius: 25px;
                 transition: 0.2s;
-
+                
                 &:hover {
                     transform: scale(1.2);
                     background-color: $color4;
                     border: none;
-
+                    
                     @media screen and (max-width: $mobile-size) {
                         transform: none;
                     }
-
-                    a {
-                        color: $color5;
-                    }
                 }
-
+                
                 a {
+                    display: flex;
+                    align-items: center;
                     font-weight: 400;
                     text-align: center;
                     color: $color6;
                     padding: 10px;
+
+                    i {
+                        font-size: 1.2rem;
+                        color: $color6;
+                        margin-right: 10px;
+                    }
                 }
             }
         }
     }
-
+    
     section {
         display: flex;
         flex-direction: column;

@@ -1,7 +1,6 @@
 import React from "react";
-import Carrousel from "./Carrousel";
 
-const ProjectCard = ({ id, title, text, cover, setProjectId }) => {
+const ProjectCard = ({ id, title, text, cover, setProjectId, site, code }) => {
 	const modalPreview = () => {
 		document.querySelector(".modal-container").classList.toggle("active");
 	};
@@ -20,6 +19,14 @@ const ProjectCard = ({ id, title, text, cover, setProjectId }) => {
 				}}
 			>
 				<img src={cover} alt={title} />
+			</div>
+			<div className="projects-container__projectCard__links">
+				<a href={code} className="code-link">
+					<i className="fa-solid fa-circle-chevron-left"></i>voir le code
+				</a>
+				<a href={site} className="site-link">
+					voir le site<i className="fa-solid fa-circle-chevron-right"></i>
+				</a>
 			</div>
 		</article>
 	);
