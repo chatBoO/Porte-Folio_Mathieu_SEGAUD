@@ -4,7 +4,7 @@ import { projects } from "../data/projects";
 import Modal from "./Modal";
 
 const MyProjects = () => {
-	const [projectId, setProjectId] = useState(1);
+	const [projectId, setProjectId] = useState('');
 
 	return (
 		<section id="myProjects">
