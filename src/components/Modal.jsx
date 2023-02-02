@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { projects } from "../data/projects";
 import Carrousel from "./Carrousel";
 
 const Modal = ({ projectId }) => {
+	const [currentPicture, setCurrentPicture] = useState(0);
 
 	const modalPreview = () => {
 		document.querySelector(".modal-container").classList.toggle("active");
@@ -17,11 +18,20 @@ const Modal = ({ projectId }) => {
 			<article className="modal-container">
 				<div
 					className="modal-container__overlay"
-					onClick={modalPreview}
+					onClick={() => {
+						modalPreview();
+						setCurrentPicture(0);
+					}}
 				></div>
 
 				<div className="modal-container__modal">
-					<button className="close-modal" onClick={modalPreview}>
+					<button
+						className="close-modal"
+						onClick={() => {
+							modalPreview();
+							setCurrentPicture(0);
+						}}
+					>
 						<i className="fa-regular fa-circle-xmark"></i>
 					</button>
 
@@ -29,20 +39,27 @@ const Modal = ({ projectId }) => {
 
 					<div className="languages-container">
 						{languages.map(({ nom, logo }) => (
-							<span key={nom} className="languages-container__languages">
+							<span
+								key={nom}
+								className="languages-container__languages"
+							>
 								<img src={logo} alt={nom} /> {nom}
 							</span>
 						))}
 					</div>
 
-					<Carrousel pictures={pictures} title={title} id={id} />
+					<Carrousel
+						pictures={pictures}
+						title={title}
+						id={id}
+						setCurrentPicture={setCurrentPicture}
+						currentPicture={currentPicture}
+					/>
 				</div>
 			</article>
 		);
 	} else {
-		 return ( 
-			<article className="modal-container"></article>
-		 )
+		return <article className="modal-container"></article>;
 	}
 };
 

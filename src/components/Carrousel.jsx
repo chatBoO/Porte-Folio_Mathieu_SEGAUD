@@ -1,7 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Carrousel = ({ pictures, title, id }) => {
-	const [currentPicture, setCurrentPicture] = useState(0);
+const Carrousel = ({
+	pictures,
+	title,
+	id,
+	setCurrentPicture,
+	currentPicture,
+}) => {
 
 	const goToLeft = () => {
 		// Si en cliquant le state currentPicture est à 0 alors on repasse currentPicture à "pictures.length - 1" sinon on descend le state de 1
