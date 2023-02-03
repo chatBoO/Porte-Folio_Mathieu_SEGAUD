@@ -134,7 +134,14 @@ export const projects = [
 		title: "Piiquante - Construire une API sécurisée",
 		text: "A partir d'un front existant, mettre en place une API permettant d'ajouter, de manipuler et de noter des sauces piquantes. C'est devenu possible grâce à l'initialisation d'un routeur, de la création des différentes routes du C.R.U.D et d'un système d'authenfication par token pour sécuriser les requêtes. L'API utilise MongoDB Atlas pour la sauvegarde des données.",
 		cover: "/img/images-projets/piiquante.webp",
-		pictures: [],
+		pictures: [
+			"/img/images-carrousel/piiquante/1.png",
+			"/img/images-carrousel/piiquante/2.png",
+			"/img/images-carrousel/piiquante/3.png",
+			"/img/images-carrousel/piiquante/4.png",
+			"/img/images-carrousel/piiquante/5.png",
+			"/img/images-carrousel/piiquante/6.png",
+		],
 		languages: [
 			{
 				nom: "HTML",
@@ -144,16 +151,35 @@ export const projects = [
 				nom: "CSS",
 				logo: "/img/logos-langages/css.webp",
 			},
+			{
+				nom: "Express",
+				logo: "/img/logos-langages/express.webp",
+			},
+			{
+				nom: "MongoDB Atlas",
+				logo: "/img/logos-langages/mongoDBAtlas.webp",
+			},
 		],
-		// site:
-		// code:
+		code: "https://github.com/chatBoO/p6-piiquante",
 	},
 	{
 		id: 6,
 		title: "Kasa - Créer une application web avec React",
 		text: "Grâce à REACT et à l'utilisation de composants fonctionnels réutilisables, cette application dispose de bonnes performances d'affichage et de SEO. Elle dispose d'un sytème de routes et affiche les logements disponibles ainsi que leur fiche détaillée.",
 		cover: "/img/images-projets/kasa.webp",
-		pictures: [],
+		pictures: [
+			"/img/images-carrousel/kasa/1.png",
+			"/img/images-carrousel/kasa/2.png",
+			"/img/images-carrousel/kasa/3.png",
+			"/img/images-carrousel/kasa/4.png",
+			"/img/images-carrousel/kasa/5.png",
+			"/img/images-carrousel/kasa/6.png",
+			"/img/images-carrousel/kasa/7.png",
+			"/img/images-carrousel/kasa/8.png",
+			"/img/images-carrousel/kasa/9.png",
+			"/img/images-carrousel/kasa/10.png",
+			"/img/images-carrousel/kasa/11.png",
+		],
 		languages: [
 			{
 				nom: "HTML",
@@ -163,8 +189,15 @@ export const projects = [
 				nom: "CSS",
 				logo: "/img/logos-langages/css.webp",
 			},
+			{
+				nom: "Sass",
+				logo: "/img/logos-langages/sass.webp",
+			},
+			{
+				nom: "React",
+				logo: "/img/logos-langages/react.webp",
+			},
 		],
-		// site:
-		// code:
+		code: "https://github.com/chatBoO/p7-kasa",
 	},
 ];

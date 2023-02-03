@@ -7,7 +7,7 @@
     left: 0px;
     z-index: 2;
     transition: visibility 0.4s;
-    
+
     &.active {
         visibility: visible;
 
@@ -15,7 +15,7 @@
             opacity: 1;
             transition: opacity 0.4s ease-out;
         }
-        
+
         .modal-container__modal {
             opacity: 1;
             transition: opacity 0.4s 0.2s ease-out, transform 0.4s 0.2s ease-out;
@@ -52,6 +52,10 @@
 
         @media screen and (max-width: $tablet-size) {
             width: 100%;
+        }
+
+        @media (max-width: $min-size) {
+            padding: 5px;
         }
 
         .close-modal {
@@ -93,6 +97,10 @@
             justify-content: center;
             align-items: center;
 
+            @media (max-width: $mobile-size) {
+                display: none;
+            }
+
             &__languages {
                 display: flex;
                 justify-content: center;
@@ -106,15 +114,11 @@
                 background-color: $background2;
                 color: $color1;
 
-                @media (max-width: $min-size) {
-                    font-size: 0.5rem;
-                    padding: 2px 5px;
-                    margin-right: 5px;
-                }
 
                 img {
-                    width: 15px;
-                    height: 15px;
+                    width: 18px;
+                    height: 18px;
+                    margin-right: 5px;
                 }
             }
         }
