@@ -45,7 +45,7 @@ const Modal = ({ projectId }) => {
 						aria-label="close modal"
 						onClick={() => {
 							modalPreview();
-							setTimeout(() => setCurrentPicture(0), "600");
+							setTimeout(() => setCurrentPicture(0), "300");
 						}}
 					>
 						<i className="fa-regular fa-circle-xmark"></i>
