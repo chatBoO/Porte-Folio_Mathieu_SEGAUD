@@ -6,7 +6,6 @@ const Carrousel = ({
 	id,
 	setCurrentPicture,
 	currentPicture,
-	pictureActive
 }) => {
 	const goToLeft = () => {
 		// Si en cliquant le state currentPicture est à 0 alors on repasse currentPicture à "pictures.length - 1" sinon on descend le state de 1
@@ -24,14 +23,18 @@ const Carrousel = ({
 
 	return (
 		<section className="carrousel">
-			<div>
-				<img
-					src={pictureActive}
-					alt={title}
-					className="carrousel__image"
-					loading="lazy"
-				/>
-			</div>
+			{pictures.map((picture, index) => (
+			<div key={id + index}>
+					{index === currentPicture && ( // currentPicture est initialisée à 0 sera donc affichée l'image avec index[0] (la première image)
+						<img
+							src={picture}
+							alt={title}
+							className="carrousel__image"
+							loading="lazy"
+						/>
+					)}
+				</div>
+			))}
 
 			{pictures.length > 1 && ( // Affichage des flèches uniquement si le tableau "pictures" contient plus d'une image
 				<i

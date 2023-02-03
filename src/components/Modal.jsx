@@ -23,6 +23,9 @@ const Modal = ({ projectId }) => {
 	if (currentProject) {
 		const { id, title, text, cover, pictures, languages } = currentProject;
 
+		const pictureActive = pictures[currentPicture];
+		console.log(pictureActive);
+
 		return (
 			<article className="modal-container">
 				<div
@@ -68,6 +71,7 @@ const Modal = ({ projectId }) => {
 						id={id}
 						setCurrentPicture={setCurrentPicture}
 						currentPicture={currentPicture}
+						pictureActive={pictureActive}
 					/>
 				</div>
 			</article>
