@@ -32,7 +32,7 @@ const Modal = ({ projectId }) => {
 					className="modal-container__overlay"
 					onClick={() => {
 						modalPreview();
-						setTimeout(() => setCurrentPicture(0), "600");
+						setTimeout(() => setCurrentPicture(0), "400");
 					}}
 				></div>
 
