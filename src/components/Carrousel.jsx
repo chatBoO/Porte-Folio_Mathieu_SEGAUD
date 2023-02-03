@@ -7,7 +7,6 @@ const Carrousel = ({
 	setCurrentPicture,
 	currentPicture,
 }) => {
-
 	const goToLeft = () => {
 		// Si en cliquant le state currentPicture est à 0 alors on repasse currentPicture à "pictures.length - 1" sinon on descend le state de 1
 		setCurrentPicture(
@@ -31,6 +30,7 @@ const Carrousel = ({
 							src={picture}
 							alt={title}
 							className="carrousel__image"
+							loading="lazy"
 						/>
 					)}
 				</div>

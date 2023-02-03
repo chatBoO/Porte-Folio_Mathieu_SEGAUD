@@ -6,7 +6,16 @@ const Modal = ({ projectId }) => {
 	const [currentPicture, setCurrentPicture] = useState(0);
 
 	const modalPreview = () => {
-		document.querySelector(".modal-container").classList.toggle("active");
+		const body = document.querySelector("body");
+		const modalContainer = document.querySelector(".modal-container");
+
+		modalContainer.classList.toggle("active");
+
+		if (modalContainer.classList.contains("active")) {
+			body.style.overflow = "hidden";
+		} else {
+			body.style.overflow = "";
+		}
 	};
 
 	const currentProject = projects.find((projet) => projet.id === projectId);
@@ -20,22 +29,27 @@ const Modal = ({ projectId }) => {
 					className="modal-container__overlay"
 					onClick={() => {
 						modalPreview();
-						setCurrentPicture(0);
+						setTimeout(() => setCurrentPicture(0), "600");
 					}}
 				></div>
 
-				<div className="modal-container__modal">
+				<div
+					className="modal-container__modal"
+					role="dialog"
+					aria-labelledby="modalTitle"
+				>
 					<button
 						className="close-modal"
+						aria-label="close modal"
 						onClick={() => {
 							modalPreview();
-							setCurrentPicture(0);
+							setTimeout(() => setCurrentPicture(0), "600");
 						}}
 					>
 						<i className="fa-regular fa-circle-xmark"></i>
 					</button>
 
-					<h3>{title.split("-")[0]}</h3>
+					<h3 id="modalTitle">{title.split("-")[0]}</h3>
 
 					<div className="languages-container">
 						{languages.map(({ nom, logo }) => (

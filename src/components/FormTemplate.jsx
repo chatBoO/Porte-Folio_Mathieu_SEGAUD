@@ -41,7 +41,7 @@ const FormTemplate = () => {
 	return (
 		<div className="form-container">
 			<form ref={form} onSubmit={sendEmail}>
-				<label for="name">Nom, prénom / société</label>
+				<label htmlFor="name">Nom, prénom / société</label>
 				<input
 					type="text"
 					name="name"
@@ -49,7 +49,7 @@ const FormTemplate = () => {
 					required
 					autoComplete="off"
 				/>
-				<label for="email">Email</label>
+				<label htmlFor="email">Email</label>
 				<input
 					type="email"
 					name="email"
@@ -57,7 +57,7 @@ const FormTemplate = () => {
 					required
 					autoComplete="off"
 				/>
-				<label for="object">Objet</label>
+				<label htmlFor="object">Objet</label>
 				<input
 					type="text"
 					name="object"
@@ -65,7 +65,7 @@ const FormTemplate = () => {
 					required
 					autoComplete="off"
 				/>
-				<label for="message">Message</label>
+				<label htmlFor="message">Message</label>
 				<textarea name="message" id="message" required />
 				<input type="submit" value="Envoyer" />
 			</form>
