@@ -40,7 +40,15 @@
             text-align: justify;
             line-height: 2rem;
             overflow: auto;
-            padding: 5px;
+            padding: 0px 5px;
+
+            @media screen and (max-width: 1300px) {
+                height: 200px;
+            }
+            @media screen and (max-width: $tablet-size) {
+                height: 220px;
+                padding: 0px 8px;
+            }
 
             @media screen and (max-width: $min-size) {
                 font-size: 0.8rem;

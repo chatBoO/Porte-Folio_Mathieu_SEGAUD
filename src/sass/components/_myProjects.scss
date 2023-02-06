@@ -1,13 +1,15 @@
 #myProjects {
+
+    padding: 30px 5px 50px;
+
     @media screen and (max-width: $tablet-size) {
         padding: 30px 15px 50px;
     }
 
     .projects-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, 40%);
-        justify-content: space-evenly;
-        gap: 100px;
+        grid-template-columns: repeat(auto-fit, 48%);
+        gap: 2%;
 
         @media screen and (min-width: 1200px) and (max-width: 1400px) {
             grid-template-columns: repeat(auto-fit, 47%);

@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LogoSite from "../assets/img/logo.webp";
 import SocialNetworks from "./SocialNetworks";
-import WindowSize from "./WindowSize";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -69,7 +68,7 @@ const Header = () => {
 								<a href="#formation">Formation</a>
 							</li>
 							<li>
-								<a href="#projects">Projets</a>
+								<a href="#myProjects">Projets</a>
 							</li>
 							<li>
 								<a href="#contact">Contact</a>
