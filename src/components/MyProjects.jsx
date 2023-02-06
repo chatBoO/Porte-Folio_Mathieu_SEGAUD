@@ -21,7 +21,7 @@ const MyProjects = () => {
 		<section id="myProjects">
 			<h3>
 				<span className="caret" onClick={toggle}>
-					<i class="fa-solid fa-caret-down"></i>
+					<i className="fa-solid fa-caret-down"></i>
 				</span>
 				Mes projets :
 			</h3>
