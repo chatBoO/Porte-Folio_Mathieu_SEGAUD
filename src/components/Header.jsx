@@ -4,36 +4,40 @@ import SocialNetworks from "./SocialNetworks";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	
+	const toggleButtonBars = document.querySelectorAll(".toggleButton div");
+
 	useEffect(() => {
 		const headerNav = document.querySelector("#header-nav");
+		const navResponsive = document.querySelector(".nav-responsive");
 		let lastScroll = 0;
-		
+
 		window.addEventListener("scroll", () => {
 			if (window.scrollY < lastScroll) {
 				headerNav.style.top = 0 + "px";
+				
 			} else {
 				headerNav.style.top = -110 + "px";
+				navResponsive.style.transform = "translateX(800px)";
+				toggleButtonBars.forEach((bar) =>
+					bar.classList.remove("active")
+				);
+				setIsOpen(false);
 			}
 			lastScroll = window.scrollY;
 		});
 	}, []);
-	
-	const toogle = () => {
-		const responsiveNavToggle =
-		document.querySelectorAll(".responsiveNav div");
-		const navContent = document.querySelector(".navContent");
 
-			if (isOpen === false) {
-				navContent.style.transform = "translateX(-800px)";
-				responsiveNavToggle.forEach((bar) => bar.classList.add("active"));
-			} else {
-				navContent.style.transform = "none";
-				responsiveNavToggle.forEach((bar) =>
-				bar.classList.remove("active")
-				);
-			}
-		};
+	const toogle = () => {
+		const navResponsive = document.querySelector(".nav-responsive");
+
+		if (isOpen === false) {
+			navResponsive.style.transform = "none";
+			toggleButtonBars.forEach((bar) => bar.classList.add("active"));
+		} else {
+			navResponsive.style.transform = "translateX(800px)";
+			toggleButtonBars.forEach((bar) => bar.classList.remove("active"));
+		}
+	};
 
 	return (
 		<header>
@@ -46,20 +50,8 @@ const Header = () => {
 
 				<h2 className="header-nav__menu">MENU</h2>
 
-				<div
-					className="responsiveNav"
-					onClick={() => {
-						setIsOpen(!isOpen);
-						toogle();
-					}}
-				>
-					<div id="div1"></div>
-					<div id="div2"></div>
-					<div id="div3"></div>
-				</div>
-
-				<nav>
-					<div className="navContent">
+				<nav className="nav">
+					<div className="nav__content">
 						<ul>
 							<li>
 								<a href="/#about">Présentation</a>
@@ -77,10 +69,45 @@ const Header = () => {
 						<div className="cv">
 							<a href="#cv">
 								<i className="fa-solid fa-download"></i>
-								Télécharger mon CV
+								mon CV
 							</a>
 						</div>
 					</div>
+				</nav>
+
+				<div
+					className="toggleButton"
+					onClick={() => {
+						setIsOpen(!isOpen);
+						toogle();
+					}}
+				>
+					<div id="div1"></div>
+					<div id="div2"></div>
+					<div id="div3"></div>
+				</div>
+
+				<nav className="nav-responsive">
+					<ul>
+						<li>
+							<a href="/#about">Présentation</a>
+						</li>
+						<li>
+							<a href="#formation">Formation</a>
+						</li>
+						<li>
+							<a href="#myProjects">Projets</a>
+						</li>
+						<li>
+							<a href="#contact">Contact</a>
+						</li>
+						<div className="cv">
+							<a href="#cv">
+								<i className="fa-solid fa-download"></i>
+								Télécharger mon CV
+							</a>
+						</div>
+					</ul>
 				</nav>
 			</div>
 
