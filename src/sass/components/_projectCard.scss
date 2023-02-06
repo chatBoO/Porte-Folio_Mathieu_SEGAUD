@@ -45,9 +45,10 @@
             @media screen and (max-width: 1300px) {
                 height: 200px;
             }
+
             @media screen and (max-width: $tablet-size) {
                 height: 220px;
-                padding: 0px 8px;
+                padding: 0px 10px 0px 0px;
             }
 
             @media screen and (max-width: $min-size) {
@@ -117,7 +118,6 @@
                 box-shadow: 3px 4px 5px 5px rgb(160, 158, 158);
             }
         }
-
     }
 
     &__links {
@@ -134,12 +134,12 @@
             margin-top: 10px;
             border-radius: 20px;
             text-decoration: none;
-
         }
 
         .code-link:hover {
             animation: codeLink 1s ease-in-out alternate infinite;
         }
+
         .site-link:hover {
             animation: siteLink 1s ease-in-out alternate infinite;
         }

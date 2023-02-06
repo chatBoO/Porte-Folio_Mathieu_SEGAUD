@@ -5,15 +5,24 @@ import Modal from "./Modal";
 
 const MyProjects = () => {
 	const [projectId, setProjectId] = useState("");
-	
+
 	const toggle = () => {
 		const projectContainer = document.querySelector(".projects-container");
+		const caret = document.querySelector(".caret");
+
 		projectContainer.classList.toggle("hide");
+
+		projectContainer.classList.contains("hide")
+			? (caret.innerHTML = '<i class="fa-solid fa-caret-right"></i>')
+			: (caret.innerHTML = '<i class="fa-solid fa-caret-down"></i>');
 	};
+
 	return (
 		<section id="myProjects">
 			<h3>
-				<i className="fa-solid fa-hashtag" onClick={toggle}></i>
+				<span className="caret" onClick={toggle}>
+					<i class="fa-solid fa-caret-down"></i>
+				</span>
 				Mes projets :
 			</h3>
 

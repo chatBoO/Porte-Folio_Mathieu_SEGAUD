@@ -45,6 +45,9 @@ h3 {
         height: 2px;
         background-color: rgba(128, 128, 128, 0.466);
 
+        @media screen and (max-width: $tablet-size) {
+            width: 40%;
+        }
         @media screen and (max-width: $mobile-size) {
             width: 60%;
             left: 50%;

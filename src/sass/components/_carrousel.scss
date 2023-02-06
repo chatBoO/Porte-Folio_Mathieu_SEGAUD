@@ -19,7 +19,7 @@
 
         @media (max-width: $mobile-size) {
             left: 0;
-            transform: translate(0, -50%) scale(0.3);
+            transform: translate(0, -50%) scale(0.5);
         }
     }
 
@@ -33,7 +33,7 @@
 
         @media (max-width: $mobile-size) {
             right: 0;
-            transform: translate(0, -50%) scale(0.3);
+            transform: translate(0, -50%) scale(0.5);
         }
     }
 
