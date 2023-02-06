@@ -4,13 +4,13 @@ import SocialNetworks from "./SocialNetworks";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const toggleButtonBars = document.querySelectorAll(".toggleButton div");
-
+	
 	useEffect(() => {
 		const headerNav = document.querySelector("#header-nav");
 		const navResponsive = document.querySelector(".nav-responsive");
+		const toggleButtonBars = document.querySelectorAll(".toggleButton div");
 		let lastScroll = 0;
-
+		
 		window.addEventListener("scroll", () => {
 			if (window.scrollY < lastScroll) {
 				headerNav.style.top = 0 + "px";
@@ -19,15 +19,16 @@ const Header = () => {
 				headerNav.style.top = -110 + "px";
 				navResponsive.style.transform = "translateX(800px)";
 				toggleButtonBars.forEach((bar) =>
-					bar.classList.remove("active")
+				bar.classList.remove("active")
 				);
 				setIsOpen(false);
 			}
 			lastScroll = window.scrollY;
 		});
 	}, []);
-
+	
 	const toogle = () => {
+		const toggleButtonBars = document.querySelectorAll(".toggleButton div");
 		const navResponsive = document.querySelector(".nav-responsive");
 
 		if (isOpen === false) {
