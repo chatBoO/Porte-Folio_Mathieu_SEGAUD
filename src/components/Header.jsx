@@ -4,11 +4,11 @@ import SocialNetworks from "./SocialNetworks";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
-
+	
 	useEffect(() => {
 		const headerNav = document.querySelector("#header-nav");
 		let lastScroll = 0;
-
+		
 		window.addEventListener("scroll", () => {
 			if (window.scrollY < lastScroll) {
 				headerNav.style.top = 0 + "px";
@@ -18,22 +18,22 @@ const Header = () => {
 			lastScroll = window.scrollY;
 		});
 	}, []);
-
+	
 	const toogle = () => {
 		const responsiveNavToggle =
-			document.querySelectorAll(".responsiveNav div");
+		document.querySelectorAll(".responsiveNav div");
 		const navContent = document.querySelector(".navContent");
 
-		if (isOpen === false) {
-			navContent.style.transform = "translateX(-800px)";
-			responsiveNavToggle.forEach((bar) => bar.classList.add("active"));
-		} else {
-			navContent.style.transform = "none";
-			responsiveNavToggle.forEach((bar) =>
+			if (isOpen === false) {
+				navContent.style.transform = "translateX(-800px)";
+				responsiveNavToggle.forEach((bar) => bar.classList.add("active"));
+			} else {
+				navContent.style.transform = "none";
+				responsiveNavToggle.forEach((bar) =>
 				bar.classList.remove("active")
-			);
-		}
-	};
+				);
+			}
+		};
 
 	return (
 		<header>
