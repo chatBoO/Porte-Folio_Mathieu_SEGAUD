@@ -24,7 +24,7 @@
             margin: 0;
             
             @media screen and (max-width: $tablet-size) {
-                font-size: 1.1rem;
+                font-size: 1.2rem;
                 display: flex;
                 align-items: center;
             }
@@ -37,7 +37,7 @@
             
             @media screen and (max-width: $min-size) {
                 width: 100%;
-                font-size: 1rem;
+                font-size: 1.1rem;
                 line-height: 2rem;
                 text-align:center;
             }
