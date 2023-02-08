@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
+import punaise from "../assets/img/punaise.webp";
+import personnage from "../assets/img/personnage3.webp";
 
 const FormTemplate = () => {
 	const form = useRef();
@@ -39,38 +41,54 @@ const FormTemplate = () => {
 	};
 
 	return (
-		<div className="form-container">
-			<form ref={form} onSubmit={sendEmail}>
-				<label htmlFor="name">Nom, prénom / société</label>
-				<input
-					type="text"
-					name="name"
-					id="name"
-					required
-					autoComplete="off"
-				/>
-				<label htmlFor="email">Email</label>
-				<input
-					type="email"
-					name="email"
-					id="email"
-					required
-					autoComplete="off"
-				/>
-				<label htmlFor="object">Objet</label>
-				<input
-					type="text"
-					name="object"
-					id="object"
-					required
-					autoComplete="off"
-				/>
-				<label htmlFor="message">Message</label>
-				<textarea name="message" id="message" required />
-				<input type="submit" value="Envoyer" />
-			</form>
-			<div className="form-message"></div>
-		</div>
+		<section id="contact">
+			<h3>Me contacter</h3>
+			<div className="form-container">
+				<div className="form">
+					<form ref={form} onSubmit={sendEmail}>
+						<label htmlFor="name">Nom, prénom / Société</label>
+						<input
+							type="text"
+							name="name"
+							id="name"
+							required
+							autoComplete="off"
+						/>
+						<label htmlFor="email">Email</label>
+						<input
+							type="email"
+							name="email"
+							id="email"
+							required
+							autoComplete="off"
+						/>
+						<label htmlFor="object">Objet</label>
+						<input
+							type="text"
+							name="object"
+							id="object"
+							required
+							autoComplete="off"
+						/>
+						<label htmlFor="message">Message</label>
+						<textarea name="message" id="message" required />
+						<input type="submit" value="Envoyer" />
+						<img
+							src={punaise}
+							alt="une punaise"
+							className="punaise"
+						/>
+					</form>
+					<div className="form-message"></div>
+
+				</div>
+					<img
+						src={personnage}
+						alt="personnage cartoon"
+						className="personnage"
+					/>
+			</div>
+		</section>
 	);
 };
 

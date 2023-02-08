@@ -1,26 +1,107 @@
-form {
-    display: grid;
-    width: 30%;
-    min-width: 300px;
-    max-width: 600px;
-    margin: auto;
-    text-shadow: 1px 1px 6px rgb(61, 61, 61);
-}
+#contact {
+    padding: 30px 50px;
 
-.success,
-.error {
-    width: 400px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
+    @media screen and (max-width: $min-size) {
+        padding: 30px 15px 50px;
+    }
 
-.success {
-    background: green;
-}
+    .form-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
 
-.error {
-    background: red;
+        .form {
+            width: 40%;
+
+            @media screen and (max-width: $min-size) {
+                flex-direction: column;
+            }
+
+            form {
+                position: relative;
+                display: grid;
+                width: 100%;
+                min-width: 300px;
+                max-width: 650px;
+                height: 500px;
+                max-height: 80vh;
+                padding: 30px;
+                background: $background1;
+                border: 1px dashed $color3;
+
+                label {
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 5px 0px;
+                }
+
+                input[type=text],
+                input[type=email],
+                textarea {
+                    height: 30px;
+                    background: none;
+                    border: 1px solid $color3;
+                    font-size: 1rem;
+                }
+
+                textarea {
+                    min-height: 120px;
+                    max-height: 200px;
+                    resize: vertical;
+                }
+
+                input[type=submit] {
+                    width: 30%;
+                    height: 30px;
+                    margin-top: 20px;
+                    padding: 0;
+                    background: none;
+                    border: 1px solid $color3;
+                    border-radius: 15px;
+                    transition: 0.2s;
+                    cursor: pointer;
+
+                    &:hover {
+                        background: lighten($color: $background1, $amount: 8);
+                    }
+                }
+
+                .punaise {
+                    position: absolute;
+                    width: 40px;
+                    height: 40px;
+                    top: -10px;
+                    left: 50%;
+                    // transform: translate(-50%)
+                }
+            }
+
+            .success,
+            .error {
+                min-width: 300px;
+                max-width: 650px;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 10px;
+            }
+
+            .success {
+                background: green;
+            }
+
+            .error {
+                background: red;
+            }
+
+        }
+
+        .personnage {
+            width: 400px;
+            height: 533px;
+            margin-left: 20px;
+        }
+    }
 }

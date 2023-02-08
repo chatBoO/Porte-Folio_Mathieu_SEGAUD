@@ -8,17 +8,13 @@ const Home = () => {
 
 	return (
 		<main>
-
 			<About />
 
 			<Formations />
 
 			<MyProjects />
 
-			<section className="contact-form" id="contact">
-				<h3>Me contacter</h3>
-				<FormTemplate />
-			</section>
+			<FormTemplate />
 		</main>
 	);
 };
