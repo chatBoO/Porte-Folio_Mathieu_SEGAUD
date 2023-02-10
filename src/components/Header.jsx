@@ -14,11 +14,9 @@ const Header = () => {
 		window.addEventListener("scroll", () => {
 
 			if (window.scrollY < lastScroll) {
-				console.log("scroll0")
 				headerNav.style.top = 0 + "px";
 				
 			} else {
-				console.log("scroll1");
 				headerNav.style.top = -110 + "px";
 				navResponsive.style.transform = "translateX(800px)";
 				toggleButtonBars.forEach((bar) =>
