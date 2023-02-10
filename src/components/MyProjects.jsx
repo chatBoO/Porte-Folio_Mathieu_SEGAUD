@@ -13,8 +13,8 @@ const MyProjects = () => {
 		projectContainer.classList.toggle("hide");
 
 		projectContainer.classList.contains("hide")
-			? (caret.innerHTML = '<i class="fa-solid fa-caret-right"></i>')
-			: (caret.innerHTML = '<i class="fa-solid fa-caret-down"></i>');
+			? (caret.innerHTML = '<i className="fa-solid fa-caret-right"></i>')
+			: (caret.innerHTML = '<i className="fa-solid fa-caret-down"></i>');
 	};
 
 	return (

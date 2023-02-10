@@ -22,7 +22,7 @@ const FormTemplate = () => {
 					console.log(result.text);
 					form.current.reset();
 					formMessage.innerHTML =
-						"<p class='success'>Message envoyé !</p>";
+						"<p className='success'>Message envoyé !</p>";
 
 					setTimeout(() => {
 						formMessage.innerHTML = "";
@@ -31,7 +31,7 @@ const FormTemplate = () => {
 				(error) => {
 					console.log(error.text);
 					formMessage.innerHTML =
-						"<p class='error'>Une erreur s'est produite, veuillez réessayer</p>";
+						"<p className='error'>Une erreur s'est produite, veuillez réessayer</p>";
 
 					setTimeout(() => {
 						formMessage.innerHTML = "";
@@ -87,7 +87,7 @@ const FormTemplate = () => {
 					className="personnage"
 				/>
 				<p className="phone-number">
-					<i class="fa-solid fa-mobile-screen"></i> Ou par téléphone au : 07.81.57.70.28
+					<i className="fa-solid fa-mobile-screen"></i> Ou par téléphone au : 07.81.57.70.28
 				</p>
 			</div>
 		</section>
