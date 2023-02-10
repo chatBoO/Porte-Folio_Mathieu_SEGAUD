@@ -14,7 +14,8 @@ header {
         padding: 0px 0px 0px 20px;
         background: $background2;
         position: fixed;
-        transition: 0.2s;
+        top: 0px;
+        transition: 0.3s;
         z-index: 2;
         user-select: none;
 
@@ -131,7 +132,7 @@ header {
                 transition: 0.2s;
 
                 &:hover {
-                    transform: scale(1.2);
+                    transform: scale(1.1);
                     background-color: $color4;
                     border: none;
 

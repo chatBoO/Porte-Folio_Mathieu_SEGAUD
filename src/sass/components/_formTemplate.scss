@@ -9,12 +9,29 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
+
+
+        @media screen and (max-width: $mobile-size) {
+            flex-direction: column;
+        }
 
         .form {
             width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            @media screen and (max-width: $mobile-size) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 90%;
+                flex-direction: column;
+            }
 
             @media screen and (max-width: $min-size) {
+                width: 100%;
                 flex-direction: column;
             }
 
@@ -73,12 +90,12 @@
                     height: 40px;
                     top: -10px;
                     left: 50%;
-                    // transform: translate(-50%)
                 }
             }
 
             .success,
             .error {
+                width: 100%;
                 min-width: 300px;
                 max-width: 650px;
                 margin: auto;
@@ -102,6 +119,20 @@
             width: 400px;
             height: 533px;
             margin-left: 20px;
+
+            @media screen and (max-width: $mobile-size) {
+                display: none;
+            }
+        }
+
+        .phone-number {
+            @media screen and (min-width: $min-size) and (max-width: $mobile-size) {
+                font-size: 1.3rem;
+            }
+
+            @media screen and (min-width: $mobile-size) {
+                display: none;
+            }
         }
     }
 }

@@ -18,7 +18,8 @@ const Modal = ({ projectId }) => {
 		}
 	};
 
-	const currentProject = projects.find((projet) => projet.id === projectId);
+	const findProject = projects.find((projet) => projet.id === projectId);
+	const currentProject = findProject === undefined ? projects[0] : findProject;
 
 	if (currentProject) {
 		const { id, title, text, cover, pictures, languages } = currentProject;

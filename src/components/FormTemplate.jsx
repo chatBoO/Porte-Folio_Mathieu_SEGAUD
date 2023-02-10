@@ -80,13 +80,15 @@ const FormTemplate = () => {
 						/>
 					</form>
 					<div className="form-message"></div>
-
 				</div>
-					<img
-						src={personnage}
-						alt="personnage cartoon"
-						className="personnage"
-					/>
+				<img
+					src={personnage}
+					alt="personnage cartoon"
+					className="personnage"
+				/>
+				<p className="phone-number">
+					<i class="fa-solid fa-mobile"></i> Ou par téléphone au : 07.81.57.70.28
+				</p>
 			</div>
 		</section>
 	);
