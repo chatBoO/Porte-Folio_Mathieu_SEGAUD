@@ -4,6 +4,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
 
     @media (max-width: $mobile-size) {
         width: 100%;
@@ -21,6 +22,10 @@
             left: 0;
             transform: translate(0, -50%) scale(0.5);
         }
+
+        &:hover {
+            cursor: pointer;
+        }
     }
 
     &__right-arrow {
@@ -34,6 +39,10 @@
         @media (max-width: $mobile-size) {
             right: 0;
             transform: translate(0, -50%) scale(0.5);
+        }
+
+        &:hover {
+            cursor: pointer;
         }
     }
 

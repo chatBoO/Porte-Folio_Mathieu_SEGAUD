@@ -67,6 +67,7 @@
         justify-content: center;
         position: relative;
         border-radius: 15px;
+        user-select: none;
 
         &:before {
             position: absolute;
