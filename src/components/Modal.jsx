@@ -1,10 +1,28 @@
-import React, { useState } from "react";
-import { projects } from "../data/projects";
+import React, { useEffect, useState } from "react";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import { db } from "../firebase";
 import Carrousel from "./Carrousel";
 
 const Modal = ({ projectId }) => {
-	const [currentPicture, setCurrentPicture] = useState(0);
+	const [currentPicture, setCurrentPicture] = useState(0); // Affiche la première image du projet dans le carrousel (index 0)
+	const [projets, setProjets] = useState([]); // Récupère la liste de tous les projets dans la bases de données FireStore
 
+	// Récupère les projets dans Firestore Database et se lance toute seule au lancement de la page dans le useEffect
+	const fetchPost = async () => {
+		await getDocs(collection(db, "projets")).then((querySnapshot) => {
+			const newData = querySnapshot.docs.map((doc) => ({
+				...doc.data(),
+				id: doc.id,
+			}));
+			setProjets(newData);
+		});
+	};
+
+	useEffect(() => {
+		fetchPost();
+	}, []);
+
+	// Ajouter ou Retire la classe "active" au modal-container au clic sur le bouton "close" ou sur "l'overlay"
 	const modalPreview = () => {
 		const body = document.querySelector("body");
 		const modalContainer = document.querySelector(".modal-container");
@@ -18,8 +36,8 @@ const Modal = ({ projectId }) => {
 		}
 	};
 
-	const findProject = projects.find((projet) => projet.id === projectId);
-	const currentProject = findProject === undefined ? projects[0] : findProject;
+	const findProject = projets.find((projet) => projet.id === projectId);
+	const currentProject = findProject === undefined ? projets[0] : findProject;
 
 	if (currentProject) {
 		const { id, title, text, cover, pictures, languages } = currentProject;

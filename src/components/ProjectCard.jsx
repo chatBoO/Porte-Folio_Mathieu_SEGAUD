@@ -1,7 +1,8 @@
 import React from "react";
 
 const ProjectCard = ({ id, title, text, cover, setProjectId, site, code }) => {
-	
+
+	// Ajouter ou Retire la classe "active" au modal-container au clic sur la cover du projet
 	const modalPreview = () => {
 		const body = document.querySelector("body");
 		const modalContainer = document.querySelector(".modal-container");
@@ -36,10 +37,12 @@ const ProjectCard = ({ id, title, text, cover, setProjectId, site, code }) => {
 					<i className="fa-solid fa-circle-chevron-left"></i>voir le
 					code
 				</a>
-				{site ? <a href={site} className="site-link">
-					voir le site
-					<i className="fa-solid fa-circle-chevron-right"></i>
-				</a> : null}
+				{site ? (
+					<a href={site} className="site-link">
+						voir le site
+						<i className="fa-solid fa-circle-chevron-right"></i>
+					</a>
+				) : null}
 			</div>
 		</article>
 	);

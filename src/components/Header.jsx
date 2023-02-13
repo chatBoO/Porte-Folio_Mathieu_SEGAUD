@@ -56,7 +56,7 @@ const Header = () => {
 					<div className="nav__content">
 						<ul>
 							<li>
-								<a href="/#about">Présentation</a>
+								<a href="../#about">Présentation</a>
 							</li>
 							<li>
 								<a href="#formation">Formation</a>

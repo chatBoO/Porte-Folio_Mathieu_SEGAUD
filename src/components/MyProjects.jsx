@@ -1,11 +1,29 @@
 import React, { useEffect, useState } from "react";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import { db } from "../firebase"
 import ProjectCard from "./ProjectCard";
-import { projects } from "../data/projects";
 import Modal from "./Modal";
 
 const MyProjects = () => {
-	const [projectId, setProjectId] = useState("");
+	const [projectId, setProjectId] = useState(""); // Récupère l'id du projet pour l'afficher dans la modal
+	const [projets, setProjets] = useState([]); // Récupère la liste de tous les projets dans la bases de données FireStore
 
+	// Récupère les projets dans Firestore Database et se lance toute seule au lancement de la page dans le useEffect
+	const fetchPost = async () => {
+		await getDocs(collection(db, "projets")).then((querySnapshot) => {
+			const newData = querySnapshot.docs.map((doc) => ({
+				...doc.data(),
+				id: doc.id,
+			}));
+			setProjets(newData);
+		});
+	};
+
+	useEffect(() => {
+		fetchPost();
+	}, []);
+
+	// Ajoute ou enlève la classe "hide"  sur la section "Projets"
 	const toggle = () => {
 		const projectContainer = document.querySelector(".projects-container");
 		const caret = document.querySelector(".caret");
@@ -17,6 +35,7 @@ const MyProjects = () => {
 			: (caret.innerHTML = '<i className="fa-solid fa-caret-down"></i>');
 	};
 
+
 	return (
 		<section id="myProjects">
 			<h3>
@@ -27,7 +46,7 @@ const MyProjects = () => {
 			</h3>
 
 			<div className="projects-container">
-				{projects.map(({ id, title, text, cover, site, code }) => (
+				{projets.map(({ id, title, text, cover, site, code }) => (
 					<ProjectCard
 						key={id}
 						id={id}
