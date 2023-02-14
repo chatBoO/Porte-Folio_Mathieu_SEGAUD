@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import LogoSite from "../assets/img/logo.webp";
 import SocialNetworks from "./SocialNetworks";
+import Cv from "../../cv.pdf";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -41,6 +42,15 @@ const Header = () => {
 		}
 	};
 
+	 function handleDownload(event) {
+			const blob = new Blob([Cv], { type: "application/octet-stream" });
+			const url = URL.createObjectURL(blob);
+			const link = document.createElement("a");
+			link.href = url;
+			link.download = "cv.pdf";
+			link.click();
+		}
+
 	return (
 		<header>
 			<div id="header-nav">
@@ -68,11 +78,8 @@ const Header = () => {
 								<a href="#contact">Contact</a>
 							</li>
 						</ul>
-						<div className="cv">
-							<a
-								href="cv.pdf"
-								// download="CV-Mathieu_SEGAUD"
-							>
+						<div className="cv" onClick={handleDownload}>
+							<a>
 								<i className="fa-solid fa-download"></i>
 								mon CV
 							</a>
