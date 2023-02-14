@@ -42,12 +42,12 @@ const Header = () => {
 		}
 	};
 
-	 function handleDownload(event) {
+	 function handleDownload() {
 			const blob = new Blob([Cv], { type: "application/octet-stream" });
 			const url = URL.createObjectURL(blob);
 			const link = document.createElement("a");
 			link.href = url;
-			link.download = "cv.pdf";
+			link.download = "CV-Mathieu_SEGAUD.pdf";
 			link.click();
 		}
 
@@ -79,10 +79,8 @@ const Header = () => {
 							</li>
 						</ul>
 						<div className="cv" onClick={handleDownload}>
-							<a>
-								<i className="fa-solid fa-download"></i>
-								mon CV
-							</a>
+							<i className="fa-solid fa-download"></i>
+							mon CV
 						</div>
 					</div>
 				</nav>
@@ -113,11 +111,9 @@ const Header = () => {
 						<li>
 							<a href="#contact">Contact</a>
 						</li>
-						<div className="cv">
-							<a href="cv.pdf">
-								<i className="fa-solid fa-download"></i>
-								Télécharger mon CV
-							</a>
+						<div className="cv" onClick={handleDownload}>
+							<i className="fa-solid fa-download"></i>
+							Télécharger mon CV
 						</div>
 					</ul>
 				</nav>
