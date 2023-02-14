@@ -69,7 +69,10 @@ const Header = () => {
 							</li>
 						</ul>
 						<div className="cv">
-							<a href="#cv">
+							<a
+								href="./src/assets/cv.pdf"
+								// download="CV-Mathieu_SEGAUD"
+							>
 								<i className="fa-solid fa-download"></i>
 								mon CV
 							</a>
@@ -104,7 +107,9 @@ const Header = () => {
 							<a href="#contact">Contact</a>
 						</li>
 						<div className="cv">
-							<a href="#cv">
+							<a
+								href="./src/assets/cv.pdf"
+							>
 								<i className="fa-solid fa-download"></i>
 								Télécharger mon CV
 							</a>
