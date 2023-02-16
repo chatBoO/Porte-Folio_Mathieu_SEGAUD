@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import LogoSite from "../assets/img/logo.webp";
 import SocialNetworks from "./SocialNetworks";
-import Cv from "../../cv.pdf";
 
 const Header = () => {
 	const [isOpen, setIsOpen] = useState(false);
@@ -13,10 +12,8 @@ const Header = () => {
 		let lastScroll = 0;
 
 		window.addEventListener("scroll", () => {
-
 			if (window.scrollY < lastScroll) {
 				headerNav.style.top = 0 + "px";
-				
 			} else {
 				headerNav.style.top = -110 + "px";
 				navResponsive.style.transform = "translateX(800px)";
@@ -41,15 +38,6 @@ const Header = () => {
 			toggleButtonBars.forEach((bar) => bar.classList.remove("active"));
 		}
 	};
-
-	 function handleDownload() {
-			const blob = new Blob([Cv], { type: "application/octet-stream" });
-			const url = URL.createObjectURL(blob);
-			const link = document.createElement("a");
-			link.href = url;
-			link.download = "CV-Mathieu_SEGAUD.pdf";
-			link.click();
-		}
 
 	return (
 		<header>
@@ -78,9 +66,11 @@ const Header = () => {
 								<a href="#contact">Contact</a>
 							</li>
 						</ul>
-						<div className="cv" onClick={handleDownload}>
-							<i className="fa-solid fa-download"></i>
-							mon CV
+						<div className="cv">
+							<a href="/CV-Mathieu_SEGAUD.pdf">
+								<i className="fa-solid fa-download"></i>
+								mon CV
+							</a>
 						</div>
 					</div>
 				</nav>
@@ -111,9 +101,11 @@ const Header = () => {
 						<li>
 							<a href="#contact">Contact</a>
 						</li>
-						<div className="cv" onClick={handleDownload}>
-							<i className="fa-solid fa-download"></i>
-							Télécharger mon CV
+						<div className="cv">
+							<a href="/CV-Mathieu_SEGAUD.pdf" download>
+								<i className="fa-solid fa-download"></i>
+								Télécharger mon CV
+							</a>
 						</div>
 					</ul>
 				</nav>
