@@ -1,0 +1,63 @@
+.addProject {
+
+    &__login {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30%;
+            height: 150px;
+
+            input {
+                width: 100%;
+                height: 30px;
+            }
+
+            button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 30%;
+                height: 22px;
+            }
+        }
+    }
+}
+
+.projectsList-container {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .newProject {
+        align-self: center;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 40%;
+        max-height: 1000px;
+
+        input, textarea {
+            margin-bottom: 10px;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 50px;
+            max-height: 200px;
+        }
+
+        button {
+            width: 20%;
+        }
+    }
+}
