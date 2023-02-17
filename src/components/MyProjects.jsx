@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc, getDocs, query, orderBy } from "firebase/firestore";
 import { db } from "../firebase"
 import ProjectCard from "./ProjectCard";
 import Modal from "./Modal";
@@ -10,7 +10,7 @@ const MyProjects = () => {
 
 	// Récupère les projets dans Firestore Database et se lance toute seule au lancement de la page dans le useEffect
 	const fetchPost = async () => {
-		await getDocs(collection(db, "projets")).then((querySnapshot) => {
+		await getDocs (query(collection(db, "projets"), orderBy("id"))).then((querySnapshot) => {
 			const newData = querySnapshot.docs.map((doc) => ({
 				...doc.data(),
 				id: doc.id,

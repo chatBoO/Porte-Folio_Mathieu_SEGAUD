@@ -6,12 +6,12 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-	apiKey: "AIzaSyA07xHHZedKCphJAIjSjn2-FXbAAsFsJds",
+	apiKey: import.meta.env.VITE_APIKEY,
 	authDomain: "porte-folio-mathieu-s.firebaseapp.com",
 	projectId: "porte-folio-mathieu-s",
 	storageBucket: "porte-folio-mathieu-s.appspot.com",
-	messagingSenderId: "788808672234",
-	appId: "1:788808672234:web:bff2d86c474cfc177fc893",
+	messagingSenderId: import.meta.env.VITE_SENDERID,
+	appId: import.meta.env.VITE_APPID,
 };
 
 // Initialize Firebase

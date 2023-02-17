@@ -1,7 +1,18 @@
 import React, { useState, useEffect } from "react";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import {
+	collection,
+	addDoc,
+	getDocs,
+	query,
+	orderBy,
+} from "firebase/firestore";
 import { db } from "./firebase";
-import { getAuth, signInWithEmailAndPassword, signOut } from "firebase/auth";
+import {
+	getAuth,
+	signInWithEmailAndPassword,
+	signOut,
+	onAuthStateChanged,
+} from "firebase/auth";
 
 const AddProject = () => {
 	const auth = getAuth();
@@ -10,7 +21,7 @@ const AddProject = () => {
 
 	const [mail, setMail] = useState();
 	const [password, setPassword] = useState();
-	const [connected, setConnected] = useState(auth.currentUser);
+	const [connected, setConnected] = useState(null);
 
 	const [id, setId] = useState();
 	const [title, setTitle] = useState();
@@ -25,7 +36,6 @@ const AddProject = () => {
 
 	const login = (e) => {
 		e.preventDefault();
-		const auth = getAuth();
 		signInWithEmailAndPassword(auth, mail, password)
 			.then((userCredential) => {
 				const user = userCredential.user;
@@ -56,12 +66,11 @@ const AddProject = () => {
 	//--------------------------LOGOUT-------------------------------------
 
 	const logout = () => {
-		const auth = getAuth();
 		signOut(auth)
 			.then(() => {
 				alert("Vous avez bien été déconnecté !");
+				setConnected(null);
 			})
-			.then(() => setConnected(auth.currentUser))
 			.catch((error) => {
 				console.log(error);
 			});
@@ -70,7 +79,7 @@ const AddProject = () => {
 	//--------------------------GET ALL PROJECTS-------------------------------------
 
 	const fetchAllProjects = async () => {
-		await getDocs(collection(db, "projets")).then((querySnapshot) => {
+		await getDocs(query(collection(db, "projets"), orderBy("id"))).then((querySnapshot) => {
 			const newData = querySnapshot.docs.map((doc) => ({
 				...doc.data(),
 				// id: doc.id,
@@ -114,7 +123,14 @@ const AddProject = () => {
 	}, []);
 
 	useEffect(() => {
-		setConnected(auth.currentUser);
+		onAuthStateChanged(auth, (user) => {
+			if (user) {
+				console.log(user);
+				setConnected(user);
+			} else {
+				console.log("Vous n'êtes pas connectés");
+			}
+		});
 	}, []);
 
 	//---------------------------------------------------------------------------------
