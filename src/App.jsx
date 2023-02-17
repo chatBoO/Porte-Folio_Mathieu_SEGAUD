@@ -12,7 +12,6 @@ const App = () => {
 			<Routes>
 				<Route path="/" element={<Home />} />
 				<Route path="*" element={<Home />} />
-				<Route path="/newProject" element={<AddProject />} />
 			</Routes>
 	<Footer />
 		</BrowserRouter>
