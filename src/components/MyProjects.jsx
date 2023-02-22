@@ -23,7 +23,7 @@ const MyProjects = () => {
 		fetchPost();
 	}, []);
 
-	// Ajoute ou enlève la classe "hide"  sur la section "Projets"
+	// Ajoute ou enlève la classe "hide"  sur la div "projects-container"
 	const toggle = () => {
 		const projectContainer = document.querySelector(".projects-container");
 		const caret = document.querySelector(".caret");
@@ -31,8 +31,8 @@ const MyProjects = () => {
 		projectContainer.classList.toggle("hide");
 
 		projectContainer.classList.contains("hide")
-			? (caret.innerHTML = '<i className="fa-solid fa-caret-right"></i>')
-			: (caret.innerHTML = '<i className="fa-solid fa-caret-down"></i>');
+			? (caret.innerHTML = '<i class="fa-solid fa-caret-right"></i>')
+			: (caret.innerHTML = '<i class="fa-solid fa-caret-down"></i>');
 	};
 
 
