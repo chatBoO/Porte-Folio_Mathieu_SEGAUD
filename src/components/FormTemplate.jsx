@@ -87,7 +87,8 @@ const FormTemplate = () => {
 					className="personnage"
 				/>
 				<p className="phone-number">
-					<i className="fa-solid fa-mobile-screen"></i> Ou par téléphone au : 07.81.57.70.28
+					<i className="fa-solid fa-mobile-screen"></i> Ou par
+					téléphone au : 07.81.57.70.28
 				</p>
 			</div>
 		</section>
