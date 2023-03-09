@@ -15,7 +15,6 @@ const FormTemplate = () => {
 				"service_iycpl2l",
 				"template_tugt7ai",
 				form.current,
-				import.meta.env.VITE_USERID,
 				process.env.USERID
 			)
 			.then(
