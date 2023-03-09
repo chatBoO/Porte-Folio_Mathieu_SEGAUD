@@ -2,6 +2,7 @@ import React from 'react'
 import photoMS from "../assets/img/ms-color-resized.webp";
 const About = () => {
 
+	// Calcul la différence entre deux dates
     const yearsDiff = (date) => {
 		const currentYear = new Date();
 		const dateChoiced = new Date(date);
