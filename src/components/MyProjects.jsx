@@ -10,7 +10,7 @@ const MyProjects = () => {
 
 	// Récupère les projets dans Firestore Database et se lance toute seule au lancement de la page dans le useEffect
 	const fetchPost = async () => {
-		await getDocs (query(collection(db, "projets"), orderBy("id"))).then((querySnapshot) => {
+		await getDocs (query(collection(db, "projets"), orderBy("id", "desc"))).then((querySnapshot) => {
 			const newData = querySnapshot.docs.map((doc) => ({
 				...doc.data(),
 				id: doc.id,
