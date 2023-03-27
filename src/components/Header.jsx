@@ -113,7 +113,7 @@ const Header = () => {
 
 			<section>
 				<div>
-					<h1>Développeur web junior Front-end</h1>
+					<h1>Développeur web junior</h1>
 					<h2>En constante évolution pour vos projets...</h2>
 					<a href="#contact" className="btn">
 						Contactez moi
